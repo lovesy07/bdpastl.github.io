@@ -215,3 +215,8 @@ footer .glyphicon {
         font-size: 150px;
     }
 }
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
