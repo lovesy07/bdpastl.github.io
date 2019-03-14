@@ -2,7 +2,7 @@
 
 
 
-In order to work with HTML / CSS / Javascrip / etc. we're going to need to start with some special tools: 
+In order to work with HTML / CSS / Javascript / etc. we're going to need to start with some special tools: 
 
 
 
@@ -20,7 +20,7 @@ In order to work with HTML / CSS / Javascrip / etc. we're going to need to start
 
 ### A Slack Account: 
 
-​	Slack is a tool for communicating efficiently on teams. You will be emailed a link to join slack. Set up a profile! Join `#bdpa2019`, say hello, and write a quick introduction about yourself including: 
+​	Slack is a tool for communicating efficiently on teams. You will be emailed a link to join slack. Set up a profile! Join `#hscc2019`, say hello, and write a quick introduction about yourself including: 
 
  - Technological background (having no technical background is completely fine! We all start from somewhere)
  - Why you want to learn code. 
