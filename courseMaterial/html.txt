@@ -1,0 +1,455 @@
+<Editors: 
+
+Codepen.io? 
+Students create new pens. Use these pens to show what is happening. 
+URLs to grade. 
+
+
+
+Downloads:
+- VSCode (use anything with syntax highlighting)
+
+
+
+Day 1. 
+Sign up for Github
+Sign up for Codepen
+
+What is HTML: 
+Hypertext Markup Language
+- Not a language (Markup languages have tags (with elements and attributes))
+- HTML5 is the latest version. 
+
+HTML has elements that display content. 
+- elements tart with opening tags and closing tags. 
+- <example> </example>  <p> </p> <div> </div>
+
+<!DOCTYPE html> is what we see at the beginning of an HTML page. This is the one `tag` that you'll see that doesn't have a closing tag. That tells us we're using HTML on the page! 
+<html> </html> is where we put all the html code
+<head> </head> is where we put certain header elements like 'titles'. This holds all the 'smart' details (the brain of the page)
+<body> </body> is where all of the html that we want to see rendered onto the page  
+
+Some leements hold no content (like line breaks <br /> , horizontal rules <hr />, and images <img />)
+
+Always close elements! 
+
+
+Block Elements: 
+Elements that take up all the space from left to right! Many elements do this: 
+<div> <p> <table> <hr /> etc. There are many ways to get around this, which we'll go over soon!
+
+GO OVER HOW HTML RENDERS '<' and '>'
+
+Without using CSS, block elements take up as much space as they possibly can from left to right (within whatever element it is). 
+
+Attributes: 
+Almost all elements allow attributes, which define an element.  
+Values of your attributes MUST be in quotations.
+class, id, style, and title are attributes you'll see regularly. 
+Class refers to CSS styling assignments. Similar to ID but doesn't have to be uniq
+id attributes are for assigning special IDs to specific elements. These must be specific!
+name
+style - for styling purposes!
+target
+title - a title (e.g. in an href - hover over and show the title)
+href is a reference to a particluar URL. 
+
+Line Breaks: 
+<br />  -> looks different to other tags we've been using! <br is the opening, but since we're not putting anything between the <br> </br>, we can just shorten it to <br /> where /> is the treated as the 'closing'
+
+
+Paragraphs: 
+<p> </p> creates a double line between elements. It keeps content together. Think of it like a book! 
+
+Headers: 
+<h#> </h#>
+<h1> </h1>
+....
+<h6> </h6>
+Headers are block elements that get consecutively smaller the higher the number gets! H1s are very large. 
+
+Links: 
+<a> </a> is an 'anchor' element. 
+Just like every other element within 
+
+
+Formatting! 
+You can format just like microsoft word. 
+<strong>Bold Letters</strong>
+<b> Bold Letters</b>
+Both show up as bold - though when working with a screen reader for visually impaired people, strong shows less emphasis
+
+<em>Italicized Letters</em>
+<i>Italicized Letters</i>
+Again similar to bold
+
+<u>Underlines!</>
+
+All three tags can go inside each other! 
+<b><i><u>SUPER FORMATTING</u></i></b>
+
+All of these support title, class, id, and style too! 
+
+<sub>Sub</sub>scripts are great! 
+<sup>Super</sup>scripts are also great
+
+When you want to show some code on your page! 
+<code> const code = 'I AM A CONSTANT' </code>
+
+Preformatted text: 
+<pre> This 
+text displays            exactly HOWyou 
+type it 
+out </pre>
+
+Preformatted text is a block element, and will create its own section (very much unlike the other formatters)
+
+ 
+
+ The Div element: 
+ A div element is just a dummy block element you use in conjuction with CSS (once you master CSS this is what you'll mostly use!)
+ You can't put multiple divs beside each other because they're block elements 
+ To put them together you'll need to use the attribute: `display: inline-block`
+
+
+ Lists: 
+ There are two types of lists! 
+ First: 
+ Unordered Lists: 
+ <ul> 
+   <li>List Item1!</li>
+   <li>List Item2!</li>
+   <li>List Item3!</li>
+   <li>List Item4!</li>
+ </ul>
+
+You can add types of bullets: (bullets are default)
+<ul type='square'></ul>  blocks\!
+<ul type='disc'></ul>  bullets
+<ul type='circle'></ul>  empty circles
+
+Ordered lists (1,2,3,4,.... ; a,b,c,d....., i,ii,iii,iv...)
+<ol>
+    <li>List Item1</li>
+    <li>List Item2</li>
+    <li>List Item3</li>
+    <li>List Item4</li>
+</ol>
+
+Can change types! 
+<ol type='1'></ol> numbers!
+<ol type='a'></ol> lowercase letters!
+<ol type='A'></ol> uppercase letters!
+<ol type='i'></ol> lowercase roman numerals! 
+<ol type='I'></ol> uppercase roman numerals!
+
+You can start ordered lists at any number, by using the 'start' attribute 
+<ol start='5'></ol>
+
+
+
+Definition Lists: 
+You could create a 
+<dl>
+    <dt>Title 1</dt>
+        <dd>Definition one</dd>
+    <dt>Title 2</dt>
+        <dd>Other definition</dd>
+</dl>
+
+dl = definition lists
+dt = definition title
+dd = definition descriptions
+
+(this is mostly just used for defining terms)
+
+
+
+
+
+
+ATTRIBUTES: 
+
+The style attribute
+Style is where we input CSS styling! 
+
+color: you can use basic color names or HEX codes! 
+font-size: you can control exactly what size your element is (0-200px you can also use percent or `em`)
+background-color:You can change the color of the background of your element (if it spans the whole page as a block element, then so will the background)
+(div elements vs font elements)
+
+if you're using more than one attribute - make sure to intersperse them with semicolons!
+
+padding: 
+In an element, subelements are all touching. However, if you add padding, you can add space around your elements. 
+You can add just padding, like `padding: 5px`
+You can pad specific directions like: 
+padding-left
+padding-right
+padding-top
+padding-bottom
+
+
+Margin, similar to padding, is on the outside! Instead of creating a gap on the insde of the border, you create one on the outside of the border. 
+Margins work just like padding: `margin: 5px`
+margin-left
+margin-right
+margin-top
+margin-bottom
+
+Commenting! 
+Commenting your code is very nice for you to read! When the page renders, you won't be able to see it! The comments only display in your editor.
+ That doesn't mean that others can't see your comments at all! They can open up their developer tools and see your page's source code!
+
+ Anchors can use an href: 
+ <a href="https://www.google.com">I'm a link</a>
+ 
+ The anchor element can also take targetswhich tell you where to open the links: 
+  _self - opens link in current frame (default),
+  _blank - opens in new window or tab,
+ 
+  Make sure that each value starts with an underscore
+ 
+ Links to other links! 
+ Suppose you want somebody to see something lower on your page - you can link to your own page by using: 
+ <a id='coolSpot'>I'm a cool Spot</a>
+ 
+ to get to that cool spot, you could click on a link: 
+ <a href='#coolSpot'> Go to Cool Spot! </a>
+ 
+ 
+ USING IMAGES: 
+ <img /> because there's no real content inside the img tag, its closing tag is already there. (we dont' need to do <img> </img>)
+ To use an image, you can either use an already uploaded image on the internet, OR one in your sites directories: 
+ 
+ For an internet link, it's literally a link to the image: 
+ <img src='https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2018/05/22224952/beagle-puppy-in-large-cushion-chair.jpg' />
+ 
+ For a directory link, it needs to follow the file path from your HTML file to your image folder: 
+ <img src='images/puppy.jpg'>
+ 
+ You can add formatting to your images to: 
+ add a border attribute: 
+ <img src='images/puppy.jpg' border='3px solid black'>
+ 
+ width / height
+ <img src='images/puppy.jpg' width='300' height='15'> 
+ 
+ To keep your image proportional (without squashing things), just set either the height or the width! 
+ 
+ Alternate names: 
+ <img src='images/puppy.jpg' alt='Image of a puppy'>
+ It's good to use descriptions or a descriptive name. This is because it's not always the case that you'll be able to load images, AND most internet readers for blind persons will actually read them the image (as opposed to glossing over it if there's nothing there). 
+
+
+
+
+
+
+
+TABLES: 
+You can enforce your web page's structure by using tables! 
+
+table 
+table row
+table header
+table data
+
+<table>
+    <tr>
+        <th>HEADER 1</th>
+        <th>Header 2</th>
+        <th>Header 3</th>
+    </tr>
+    <tr>
+        <td>Cell1, row1</td>
+        <td>Cell2, row1</td>
+        <td>Cell3, row1</td>
+    </tr>
+    <tr>
+        <td>Cell1, row2</td>
+        <td>Cell2, row2</td>
+        <td>Cell3, row2</td>
+    </tr>
+</table>
+
+Table Attributes! 
+Borders 
+The border attribute can border your table! 
+
+<table border=1 bordercolor='red'>
+    <tr>
+        <th>HEADER 1</th>
+        <th>Header 2</th>
+        <th>Header 3</th>
+    </tr>
+    <tr>
+        <td>Cell1, row1</td>
+        <td>Cell2, row1</td>
+        <td>Cell3, row1</td>
+    </tr>
+    <tr>
+        <td>Cell1, row2</td>
+        <td>Cell2, row2</td>
+        <td>Cell3, row2</td>
+    </tr>
+</table>
+
+Height and Width: 
+<table width='50%'></table>
+<th width='50%'></th>
+<th height='20px'></th>
+
+Notes for tables: you need to have a row before you can have a cell, and you should always put your 
+headers on top! 
+
+
+You can change other attributes too like cell spacing / padding
+<table cellspacing='0' cellpadding='0'></table>
+
+cellpadding is the exact same as padding earlier - the padding on the inside of every border. 
+cellspacing is like a margin, which spaces cells, just like margin! 
+
+cells can also merge! 
+Horizontally:
+<table>
+   
+    <tr>
+        <td colspan='2'>Cell1 and 2, row1</td>
+        <td>Cell3, row1</td>
+    </tr>
+    <tr>
+        <td>Cell1, row2</td>
+        <td>Cell2, row2</td>
+        <td>Cell3, row2</td>
+    </tr>
+</table>
+
+Vertical: 
+<table>
+    <tr>
+        <td>Cell1, row1</td>
+        <td>Cell2, row1</td>
+        <td>Cell3, row1 AND row 2</td>
+    </tr>
+    <tr>
+        <td>Cell1, row2</td>
+        <td>Cell2, row2</td>
+    </tr>
+</table>
+
+
+
+And BOTH: 
+<table>
+    <tr>
+        <td colspan='2'>Cell1 and 2, row1</td>
+        <td rowspan='2'>Cell3, row1 AND 2</td>
+    </tr>
+    <tr>
+        <td>Cell1, row2</td>
+        <td>Cell2, row2</td>
+        <td>Cell3, row2</td>
+    </tr>
+</table>
+
+FORMS: 
+(We'll be needing PHP to process forms, BUT you still need t
+Text boxes that you type in emails/usrnames are ares for entering info that you'll be using later: 
+<input type='text' name='FirstInput' />
+
+The text we enter is really just the 'value' attribute of the <input> so we close the element without adding any additional info. 
+
+passwords: 
+<input type='password' name='PasswordInput' />
+
+Text Areas: 
+Similar to text boxes, but a whole region for text input! 
+<textarea name='bigAreaForWriting' rows='5' cols='100'>Tell me about yourselF!</textarea>
+
+This input has a closing tag so that we can have some default text! You don't have to have a closing tag, and can self close! 
+
+
+Drop down menus: 
+<select name='desert'>
+    <option value='NA' disabled='disabled' selected='selected>Select A Desert!</option>
+    <option value='iceCream'>Ice Cream</option>
+    <option value='cookies'>Cookies</option>
+</select>
+
+
+
+Radio Buttons: 
+Similar to <select></select> Radio buttons allow for a user to select only one option: 
+
+<input type='radio' name='radio' id='radio1' value='radio1'>
+<input type='radio' name='radio' id='radio2' value='radio2'>
+<input type='radio' name='radio' id='radio3' value='radio3'>
+
+Since all 3 radio buttons have the same name, which groups them together. The name can be anything, but they all need to be the exact same! 
+
+
+
+Check Boxes: 
+Somewhat like radio buttons when coding them out, but you can check as many boxes as you want
+
+<input type='checkbox' name='checkbox' id='checkbox1' value='checkbox1'>
+<input type='checkbox' name='checkbox' id='checkbox2' value='checkbox2' checked='checked'>
+<input type='checkbox' name='checkbox' id='checkbox3' value='checkbox3'>
+
+Sending your data? 
+BUTTONS!
+Can use either the <button></button> element OR use <input type='button' />
+
+
+Button: 
+<button type='button'>Press My Button Element</button> <br/>
+<input type='button' value='Press my Input Element' />
+
+Right now we don't have them connected to anything so they don't do anything. 
+
+Reset: 
+<button type='reset'>Reset button Element</button> <br/>
+<input type='reset' value='Reset button Element' />
+
+
+Submit: 
+<button type='submit'>Submit  Button Element</button> <br/>
+<input type='submit' value='Submit  Input Element' />
+
+All of these elements are pointless so long as they're not linked to something: 
+
+FORM Element: 
+Input methods are great, but need to be connected to a form: 
+<form method='post' action='otherpage.html'>
+    <input type='text' name='inputText' />
+    <input type='submit' value='Submit' />
+    <input type='reset' name='Reset' />
+</form>
+
+when we click submit, it'll take us to where the action attribute points! 
+
+
+Inline frames! iFrames allow for us to put a page within a page! (It doesn't need to be a page we made, either). 
+The element requires the src attribute. (there are a lot of other attributes as well)
+
+src is the page you want to view: 
+
+<iframe src='bdpastl.github.io></iframe>
+
+Some websites don't allow framing: 
+<iframe src='https://www.google.com></iframe>
+<iframe src='https://www.facebook.com></iframe>
+
+frameborder: 
+on or off (one or zero)
+<iframe frameboder='1'></iframe>
+<iframe frameboder='0'></iframe>
+
+height and width: both px and % %supported
+
+scrolling='yes', 'no', 'auto'
+
+iFrames aren't very popular and not entirely useful - but still fun to play with and to know that it exists!
+
+

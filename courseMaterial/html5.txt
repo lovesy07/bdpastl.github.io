@@ -1,0 +1,329 @@
+
+
+
+THE DOCTYPE: 
+You've noticed that there's a <!DOCTYPE html> at the top of many pages. First and foremost, notice that there's no closing tag. <DOCTYPE> is not an html element. The <DOCTYPE html> is a declaration to your web browser that tells it that your page is an HTML page. 
+(We're not going to use it, but in HTML4, you used to have to declare <DOCTYPE HTML PUBLIC "//PAGE DATA//" "www.siteurl.com")
+
+The Head section: 
+    - Head is where the brain goes for the site. 
+    <title> THIS titles your window/tab</title>
+
+    <link> can link to external css files / page icons / etc. 
+    <link rel='stylesheet' type='text/css' href='style.css' />
+        rel is the relationship (stylesheet is currently the only relationship supported right now), the type of the stylesheet is text/css, and the href link directly pulls the stylesheet from where it lives. 
+
+    <link href-'favicon.ico' rel='icon' type='image/x-icon' /> (this lives in the tab right by the title) -.bmps or .pngs also work (icons should be  4x4 / 8x8 / 16x16)
+
+    Javascript requires using the actual <script></script> elements.
+    <script src='js/javascriptSource.js'></script>
+        The <script></script> elements are where actual javascript goes
+
+    <style></style> Style elements add our css to the page. 
+
+
+
+    <meta> - These describe the site adding author / copywright / etc. 
+    <meta name='descriptions' content='This describes the content of the site' />   
+        google hates long metas (this used to be part of how they would search)
+        the description meta is what typically pops up under google searches though. 
+    
+    <meta name='keywords' content='hscc, learn, web development, html, css, javascript, php' />
+        also helps search engines - again, don't use too many - google hates that
+
+    <meta http-equiv='refresh' content='5' />  // this refreshes the page every 5 seconds. 
+    <meta http-equiv='refresh' content='0;URL=otherPage.html'/>  // this will refresh immediately (useful for, suppose you want to redirect)
+
+
+description, keywords, robots, cache-control, expires, and possibly copywright are the most useful (there are a ton - google them for more!)
+
+
+
+Adding additional scripts! 
+    You can put scripts inline in yoru site's code between a <script></script> element, OR you can have a completely separate section. where you refer to it as <script src='path/scriptFile.js' />
+    You can put your scripts in either your head or body, but if you want your site to render as quickly as possible, put your script references at the bottom of the page, so the DOM can load as quickly as possible! 
+
+
+DOM: 
+    The Document Object Model 
+        - In html, there is a heierarchy. The topmost element (the very first opening one) is the first parent element. 
+        <div>I'm the only element, I'm a parent</div>
+        
+        - Child element: the element that sits inside the parent element
+        <div>
+            <div>
+                I'm an element inside of a parent element! That makes me a child! 
+            </div>
+        </div>
+        - Grandchildren are elements inside the child elements
+        <div>
+            <div>
+                <div>
+                    I'm an element inside of a child element, which is inside the parent element! That makes me a grandchild! 
+                </div>
+            </div>
+        </div>        
+
+    Not only are there parents, children, grandchildren, etc. we also can have siblings, like: 
+
+     <div>
+            <div>
+                <div>
+                    I'm an element inside of a child element, which is inside the parent element! That makes me a grandchild! 
+                </div>
+                <div>
+                    I'm a sibling of the grandchild! (I'm also a grandchild too!)
+                </div>
+            </div>
+        </div>     
+
+    You can break down the DOM into a 'tree' which looks like a family tree! https://www.w3schools.com/js/pic_htmltree.gif
+
+
+    The point of all of this is that we can use the DOM with javascript/jquery to manipulate html! When our projects start getting larger and larger, sometimes it's easier to look for parent or child nodes than to write a looooong line of code. it's much easier to write parent/child
+
+
+Html Enetities: 
+    when writing about code on a site, you can't just write <div> this is a div </div> because it'll render the actual elements.
+    to write html elements, or even anything that elements use, we need to get creative: 
+        &lt; div &gt this is a div &lt div / &gt
+        (this is so the browser shows the '<' and '>' as text instead of thinking they'r epart of code!)  https://entitycode.com/
+
+
+
+HTML5! 
+When using html5 elements, you absolutely need to declare your doctype as an html 5 one. It's best practice to use this, eevn if you're not using any html5, all previous code will still render!
+
+HTML 5 has new elements! 
+<article></article>
+<aside></aside>
+<figure></figure>
+<hgroup></hgroup>
+<header></header>
+<area></area>
+<section></section>
+<footer></footer>
+<nav></nav>
+<address></address>
+
+Header/Footer: 
+<header></header> && <footer></footer> -these are easier for the DOM! 
+You can have more than one header and footer, however, they can't be inside of each other (that is you can't have a header inside of a header, or a footer inside of a footer, or a footer inside of a header or vice versa)
+
+When to use a header? 
+Good for banners, logos, 
+
+Footers? 
+Put at the bottom of a page, like where contact information / links / copywright/ etc. 
+...
+<body>
+<header>
+    baner and logo stuffs go here
+</header>
+<div> here's my main stuff</div>
+<footer>
+    contact links/TOS/etc. go here! 
+</footer>
+</body>
+
+
+
+<section> for a sectioning dom nodes </section>
+<nav> Navigation links</nav> 
+<area> general use and grouping </area>
+<article> for blog posts / articles / etc. </article>
+
+Try using these instead of divs! 
+
+
+Spellcheck and Content Editable? 
+- <p spellcheck='true'> spellchec will check this sentene</p> 
+
+when using spellcheck, the content must be editable. text areas, inputs, and text in editable regions are naturally editable, but you can make other elements editable by using the contenteditable attribute: 
+<p contenteditable='true' spellcheck='true'>do som correcion</p>
+
+
+
+
+VIDEO INPUT! 
+You can embed videos! You don't need to do anything special, other than write: 
+<video>
+    <source src='video.mp4' type='video/mp4' />
+    <source src='video.ogg' type='video/ogg' />
+    <source src='video.webm' type='video/webm' />
+    Browser doesn't support video type
+</video>
+
+suppose that your browser can't read mp4, it'll go for ogg, and supposeing that it can't read ogg then it'll try webm. 
+
+attributes for videos: autoplay, controls, loop 
+<video autoplay='autoplay'> ... </video>
+<video controls='controls'> ... </video>
+<video loop='loop> ... </video>
+
+
+you can customize the video tag too with javascript: 
+<button onclick='playPause()'>Play/Pause</button>
+<button onclick='fullScreen()'>Full Screen</button>
+<button onclick='normalSize()'>Original Size</button>
+
+<video id='example'>
+    <source src='video.whatever' />
+    ... other formats.... 
+</video>
+
+<script>
+    var video = documents.getElementByI('example')
+
+    function playPause() {
+        if(example.paused)
+            example.play()
+        else
+            example.pause()
+    }
+
+    function fullScreen() {
+        example.width = window.screen.width
+    }
+
+    function normalSize() {
+        example.width = window.screen.width / 3
+    }
+</script>
+
+
+Audio stuffs! 
+Just like videos! 
+<audio controls='controls'>
+    <source src='music.ogg' type='audio/ogg' />
+    <source src='music.mp3' type='audio/mpeg' />
+    <source src='music.wav' type='audio/wav' />
+    Default text! 
+</audio>
+
+Drag and Drop HTML
+With html5, we can drag and drop elements! 
+
+<head>
+<script type='text/javascript'>
+    function allowDrop(e) {
+        e.preventDefault() 
+        /* prevents the image from moving back to its natural area */
+    }
+
+    function drag(e) {
+        e.dataTransfer.setData('Text', e.target.id)
+        /* draggable */
+    }
+
+    function drop(e) {
+        e.preventDefault()
+        d = e.dataTransfer.getData('Text') 
+        e.target.appendChild(document.getElementById(d))
+    }
+</script>
+</head>
+<body>
+    <img draggable='true' id='imDraggable' src='image.png' ondragstart='drag(event)' width='300' height='70' />
+    <div ondrop='drop(event)' ondragover='allowDrop(event)' id='dropzone'></div>
+</body>
+
+
+Geolocation: 
+You can access a user's location (if they give us permission, that is)
+We use the 'getCurrentPosition'
+
+<p id='coordinates'></p>
+<button onclick='getCoordinates()'>Find Me!</button>
+
+<script>
+var location = document.getElementById('coordinates')
+
+function getMyPosition() {
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        location.innerHTML = 'Geolocation not supported'
+    }
+}
+
+function showPosition(position) {
+    location.innerHTML = 'Latitude: ' + position.coords.latitude + '<br />Longitude: ' + position.coords.longitude'
+}
+
+</script>
+
+
+
+
+
+
+Savind Data: 
+Sometimes we need to save data, and we don't always have access to a database! We can do with with local storage.
+
+Local (stays alive until script from website destroys it): 
+
+This script checks wehter or not we can access local storage: 
+<script>
+if(typeof(Storage) !== 'undefined'){
+    alert('Local Storage accepted!')
+} else  {
+    alert('No local storage accepted')
+}
+</script>
+
+
+To store information in the browser using local storage: 
+<script>
+    localStorage.storageVariable = 'Stored Variable Data'
+</script>
+
+To access the locally stored data:
+<script>
+    alert(localStorage.storageVariable)
+</script>
+
+// local storage can only be accessed from the website it's stored on! 
+
+
+Session (stays alive until window is closed): 
+(run the script above to see if storage is allowed)
+
+<script>
+    sessionStorage.sessionVariable = 'My Session Variable'
+</script>
+
+So we can run something to the extent of: 
+
+<head>
+<script>
+function counter() {
+    if(typeof(Storage) !== 'undefined'){
+        if(sessionStorage.counter) {
+            sessionStorage.counter = Number(sessionStorage.counter) + 1
+        } else {
+            sessionStorage.counter = 1
+        }
+
+        document.getElementById('number').innerHTML = sessionStorage.counter
+
+        if(sessionStorage.counter > 1) {
+            document.getElementById('number').innerHTML += "<p> Refresh the page </p>"
+        }
+
+
+    } else  {
+        document.getElementById('number').innerHTML='Browser does not support web storage'
+    }
+}
+</script>
+</head>
+<body>
+<button onclick=c'ounter()' type='button'> Add More </button>
+<div id='number'></div>
+</body>
+
+
+
+
+
