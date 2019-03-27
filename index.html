@@ -1,8 +1,178 @@
-<!doctype html> 
-<html>
-  <head>
-  </head>
-  <body>
-    <div>Now when I write my code here,</div>  <div>I get to see some cool stuff on the page below</div>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Theme Made By www.w3schools.com -->
+    <title>BDPA STL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#myPage">BDPA St. Louis</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#materials">MATERIALS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+    </div>
+
+    <!-- Container (About Section) -->
+    <div id="about" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>About Us</h2><br>
+                <h4>We are the St. Louis chapter of the National BDPA. For more than 40 years, 
+                    BDPA has enabled the upward mobility of African Americans and other minorities in the
+                Information Technology (IT) and STEM fields.</h4><br>
+                <p> BDPA has been a leader and pioneer in technology and STEM training for IT professionals and High School students since
+                1986. Our National High School Computer Competition (HSCC) program which is a hands-on training program, has introduced
+                tens of thousands of high school students to coding and application development while also presenting opportunities for
+                students to obtain college scholarships due to the generosity of our sponsors and partners. </p>
+                <br>
+                <a class="btn btn-default btn-lg" href="https://www.bdpa.org" role="button">Learn More about the BDPA</a>
+
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-signal logo" style="color:gray"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-globe logo slideanim " style="color:gray"></span>
+            </div>
+            <div class="col-sm-8">
+                <h2>Our Values</h2><br>
+                <p><strong>MISSION:</strong> To build a pipeline of diverse professionals and aspiring students in the STEM and digital technology fields through
+                innovative professional and technical development programs and activities.</p><br>
+                <p><strong>VISION:</strong> To be the leading and most recognized organization in enabling digital leadership preparedness for aspiring diverse
+                professionals.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container (Services Section) -->
+    <div id="services" class="container-fluid text-center">
+        <h2>SERVICES</h2>
+        <h4>What we offer</h4>
+        <br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-globe logo-small" style="color:gray"></span>
+                <h4>HSCC Training</h4>
+                <p>A hands-on introductory web development course.</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-signal logo-small" style="color:gray" ></span>
+                <h4>IT Showcase Mentoring</h4>
+                <p>Get a mentor to help guide you through creating a competition ready paper, scientific poster, and presentation.</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-phone logo-small" style="color:gray"></span>
+                <h4>Mobile Application Showcase Mentoring</h4>
+                <p>Get a mentor to help guide you through creating a mobile application.</p>
+            </div>
+        </div>
+        <br><br>
+    </div>
+
+
+    <div id="materials" class="container-fluid bg-1 text-center bg-grey">
+        <h2>Course Materials</h2><br>
+
+        <h3 class="margin">Homework 1</h3>
+        <a href='./homework/Homework 1.html'>
+            <img src="./img/toDownload.png" class="img-responsive margin" style="display:inline" alt="software icons" width="350" height="350">
+        </a>
+        <h3 class="margin">Welcome! Day 1</h3>
+        <a href='./classes/Welcome!.html'>
+            <img src="./img/Orange-tabby-cat-sleeping-with-eyes-closed.jpg" class="img-responsive margin" style="display:inline" alt="software icons" width="350"
+                height="350">
+        </a>
+    </div>
+
+
+    <div id="contact" class="container-fluid bg-1 text-center">
+            <h2 class="text-center">CONTACT</h2>
+            <p><span class="glyphicon glyphicon-envelope"></span> matthew.lane@bayer.com</p>
+            <p><span class="fa fa-slack"></span>mattlane</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span> 800 N. Lindbergh Drive, J building, St. Louis MO, US</p>
+    </div>
+ 
+    <!-- Image of location/map -->
+    <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+    <footer class="container-fluid text-center">
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+
+            $(window).scroll(function () {
+                $(".slideanim").each(function () {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        })
+    </script>
+
+</body>
+
 </html>
