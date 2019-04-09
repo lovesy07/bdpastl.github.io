@@ -14,7 +14,7 @@ To use bootstrap by their web links, all we need to do is grab the link and scri
 
 
 
-As a quick reminder, here's what a site with no bootstrap looks like: 
+As a quick reminder, here's what a site with [no bootstrap looks like](https://codepen.io/bdpastl/pen/GLrYyN): 
 
 ```html
 <!doctype html>
@@ -29,7 +29,7 @@ As a quick reminder, here's what a site with no bootstrap looks like:
 </html>
 ```
 
-^^ Pretty boring, right? Now, once we add our headers into our site, our styling will completely change: 
+^^ Pretty boring, right? Now, once we add our headers into our site, [our styling will completely change](https://codepen.io/bdpastl/pen/BEpqJZ): 
 
 ```html
 <!doctype html>
@@ -87,7 +87,7 @@ So, our site has changed, but you'd think there'd be more, right? You're absolut
 }
 ```
 
-(There's no real need to know what's inside of these buttons, but it's good to see that there's a lot of styling in there. Mostly styling we'd rather not do. Why reinvent the wheel?) Let's see what that looks like below: 
+(There's no real need to know what's inside of these buttons, but it's good to see that there's a lot of styling in there. Mostly styling we'd rather not do. Why reinvent the wheel?) [Let's see what that looks like below](https://codepen.io/bdpastl/pen/dLNgdY): 
 
 ```html
 <!doctype html>
@@ -115,7 +115,7 @@ So, our site has changed, but you'd think there'd be more, right? You're absolut
 
 ## Buttons
 
-So natraully, we just saw a button in the two examples before, let's talk about buttons. Bootstrap has a ton of button options. You can find the button documentation here: https://getbootstrap.com/docs/3.4/css/#buttons 
+So natraully, we just saw a button in the two examples before, let's talk about buttons. Bootstrap has a ton of button options. You can find the button documentation here: https://getbootstrap.com/docs/3.4/css/#buttons. [Take a look!](https://codepen.io/bdpastl/pen/zXNmRX?editors=1000) 
 
 ```html
 <!doctype html>
@@ -159,7 +159,7 @@ So natraully, we just saw a button in the two examples before, let's talk about 
 
 
 
- You can also change the size of buttons by using btn-lg, btn-sm, btn-xs: 
+ You can also change the size of buttons by using [btn-lg, btn-sm, btn-xs](https://codepen.io/bdpastl/pen/ROKeMG?editors=1000): 
 
 ```html
 <!doctype html>
@@ -205,7 +205,7 @@ So natraully, we just saw a button in the two examples before, let's talk about 
 
 
 
-You can use button classes on things that aren't just buttons:  
+You can use button classes on [things that aren't just buttons](https://codepen.io/bdpastl/pen/WWRazM?editors=1000):  
 
 ```html
 <!doctype html>
@@ -233,13 +233,13 @@ There are a ton of classes that we can use for buttons. Take a look through the 
 
 ## JUMBOTRONS
 
-Jumbotrons are for when you want really showcase some material! 
+Jumbotrons are for when you want really [showcase some material!](https://codepen.io/bdpastl/pen/mgRzLO?editors=1000) 
 
 ```html
 <!doctype html>
 <html>
    <head> 
-     <title>Press my buttons!</title>
+     <title>Jumbotron!!</title>
      <!-- Latest compiled and minified CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -261,13 +261,13 @@ Jumbotrons are for when you want really showcase some material!
 
 
 
-That looks great and all, but let's throw that jumbotron in a container for some extra padding: 
+That looks great and all, but let's throw that jumbotron in a [container for some extra padding](https://codepen.io/bdpastl/pen/MRJPGP?editors=1000): 
 
 ```html
 <!doctype html>
  <html>
    <head> 
-     <title>Press my buttons!</title>
+     <title>Jumbotrons!</title>
      <!-- Latest compiled and minified CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -297,11 +297,13 @@ That looks great and all, but let's throw that jumbotron in a container for some
 
 We haven't spent any time on forms just yet, but it's good to know that bootstrap has a very sleek form styling! There are an infinite number of form possibilities. To get some kind of idea of what kind of form you'd like, check out the form documentation: https://getbootstrap.com/docs/3.4/css/#forms
 
+[See the code in action!](https://codepen.io/bdpastl/pen/vMgVrX?editors=1000)
+
 ```html
 <!doctype html>
 <html>
   <head> 
-    <title>Press my buttons!</title>
+    <title>Forms!</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -347,13 +349,13 @@ We haven't spent any time on forms just yet, but it's good to know that bootstra
 
 
 
-You can also make your form take up a significantly smaller area by adding the `class='form-inline'` (remember how we used `inline` to make our divs fit inside of other elements?) to your form: 
+You can also make your form take up a significantly smaller area by adding the `class='form-inline'` (remember how we used `inline` to make our divs fit inside of other elements?) [to your form](https://codepen.io/bdpastl/pen/JVEmaj?editors=1000): 
 
 ```html
   <!doctype html>
   <html>   
     <head> 
-      <title>Press my buttons!</title>
+      <title>Forms!</title>
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -403,13 +405,13 @@ You can also make your form take up a significantly smaller area by adding the `
 
 ## Navbars!
 
- Navbars help us navigate sites! Many sites you've been to are gargantuan, and it's hard to navigate a site just with scrolling (on inline links). These make it much easier to traverse a site, and they make our sites look really professional.
+ Navbars help us navigate sites! Many sites you've been to are gargantuan, and it's hard to navigate a site just with scrolling (on inline links). These make it much easier to traverse a site, [and they make our sites look really professional](https://codepen.io/bdpastl/pen/EJZdeq?editors=1000).
 
 ```html
 <!doctype html>
 <html>
   <head> 
-    <title>Press my buttons!</title>
+    <title>Navbar!</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -426,13 +428,13 @@ You can also make your form take up a significantly smaller area by adding the `
 
 
 
-The navbar doesn't really look like anything here, but that's because we don't have any of the corresponding elements inside it!
+The navbar doesn't really look like anything here, but that's because we don't have any of the [corresponding elements inside it](https://codepen.io/bdpastl/pen/mgRzzW?editors=1000)!
 
 ```html
 <!doctype html>
 <html>
   <head> 
-    <title>Press my buttons!</title>
+    <title>Navbars!</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -449,13 +451,13 @@ The navbar doesn't really look like anything here, but that's because we don't h
 </html>
 ```
 
-Let's add some links (though they'll all be empty for a while):
+Let's add some links [(though they'll all be empty for a while)](https://codepen.io/bdpastl/pen/WWRaLJ?editors=1000):
 
 ```html
 <!doctype html>
 <html>
   <head> 
-    <title>Press my buttons!</title>
+    <title>Navbars!</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -485,13 +487,13 @@ Let's add some links (though they'll all be empty for a while):
 
 
 
-SPACING IS EVERYTHING (notice contact is against the far right side): 
+SPACING IS EVERYTHING [(notice contact is against the far right side)](https://codepen.io/bdpastl/pen/XQpxoL?editors=1000): 
 
 ```html
 <!doctype html>
 <html>
   <head> 
-    <title>Press my buttons!</title>
+    <title>Navbar!</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -525,13 +527,13 @@ What do you think would happen if you put the navbar inside the container?
 
 
 
-Now that we understand what's happening in the nav-bar, let's checkout the bootstrap navbar that we can add to our site: 
+Now that we understand what's happening in the nav-bar, let's checkout the [bootstrap navbar that we can add to our site](https://codepen.io/bdpastl/pen/pBRxGQ?editors=1000): 
 
 ```html
 <!doctype html>
 <html>
   <head> 
-    <title>Press my buttons!</title>
+    <title>NAVBAR!</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -598,7 +600,7 @@ Now that we understand what's happening in the nav-bar, let's checkout the boots
 
 
 
-This looks really cool! But, even though we're pulling in the bootstrap css and javascript libraries, we're missing one tiny thing - jQuery. If you google jquery cdn it'll be at the first link (or just take the links I post in the code). Make sure that you place the jQuery file before the src for the javascript file! We'll talk about why this all works later, but fow now, let's make our own navbar do what the above one does!! 
+This looks really cool! But, even though we're pulling in the bootstrap css and javascript libraries, we're missing one tiny thing - jQuery. If you google jquery cdn it'll be at the first link (or just take the links I post in the code). Make sure that you place the jQuery file before the src for the javascript file! We'll talk about why this all works later, but fow now, let's make our own [navbar do what the above one does!](https://codepen.io/bdpastl/pen/mgRzom?editors=1000)! 
 
 ```html
 <!doctype html>
@@ -687,7 +689,9 @@ So now we know how to make some really cool things in bootstrap, let's take a se
 Up until now, we've only worked with block and inline elements. The only way we really knew how to make things smaller was to use something like  _float_  or by using flexbox. A big reason people like to use bootstrap is that bootstrap has a built in 'grid' system, which takes care of a lot tedious hours of styling our website structure and layout for us! (See an example of bootstrap at bdpastl.github.io - when there, try to make the window smaller and see what happens! That's the grid system in action!)
 
 When we say "grid system" what we mean is that bootstrap is set up in such a way that there are 12 columns on the site (this will make a lot more sense in a minute). When we're styling our site, all we need to do is make sure that our containers all add up to 12! 
-The one thing to remember before we go any further, is that when we want to Let's take a look: 
+
+
+ [Let's take a look](https://codepen.io/bdpastl/pen/YMNJMp?editors=1000): 
 
 ```html
 <!doctype html>
@@ -759,7 +763,7 @@ The one thing to remember before we go any further, is that when we want to Let'
 
 Did you notice that the last couple rows were in the same container? You can have as many divs as you'd like in a container, but if you're using the grid system (which you should because it's awesome!), you need to make sure that your column size all adds up to 12! Interestingly enough though, try making your screen smaller and see what happens to the divs in the bottom container. Things get weird!
 
-Speaking of columns adding up to 12, your columns don't all have to be of equal length if they're in a row! They only need to add up to 12! Let's do some mixing and matching!
+Speaking of columns adding up to 12, your columns don't all have to be of equal length if they're in a row! They only need to add up to 12! [Let's do some mixing and matching](https://codepen.io/bdpastl/pen/WWRaWy?editors=1000)!
 
 ```html
 <!doctype html>
@@ -836,7 +840,7 @@ Speaking of columns adding up to 12, your columns don't all have to be of equal 
 
 ## Grids of differing sizes! 
 
-Grid elements can have differing sizes! Did you notice the `col-xs-1`, `col-md-5`, `col-lg-6`, etc? Look at the below code (which is just our original grid from the first portion, but all the columns are `col-lg-#`). When you're on this screen, in codepen, shrink the size of the screen. What happens? 
+Grid elements can have differing sizes! Did you notice the `col-xs-1`, `col-md-5`, `col-lg-6`, etc? Look at the below code (which is just our original grid from the first portion, but all the columns are `col-lg-#`). When you're on this screen, in codepen, shrink the size of the screen. [What happens?](https://codepen.io/bdpastl/pen/KYaGLr?editors=1000) 
 
 ```html
 <!doctype html>
@@ -907,7 +911,7 @@ Grid elements can have differing sizes! Did you notice the `col-xs-1`, `col-md-5
 
 
 
-Now let's try it with half `col-lg-#` and half `col-md-#`: 
+[Now let's try it with half `col-lg-#` and half `col-md-#`:](https://codepen.io/bdpastl/pen/dLNgBp?editors=1000) 
 
 ```html
 <!doctype html>
@@ -980,7 +984,7 @@ Now let's try it with half `col-lg-#` and half `col-md-#`:
 
 So you're probably wondering "what the heck is going on with this junk?", and initially this makes little to no sense, BUT this level of responsiveness lets us really good looking websites for both desktops, laptops, tablets, and smartphones!
 
-We can do this by having our divs take in not just one class for styling, but multiple! 
+We can do this by having our divs take in not just [one class for styling, but multiple!](https://codepen.io/bdpastl/pen/pBRxXq?editors=1000) 
 
 ```html
 <!doctype html>
@@ -1033,7 +1037,7 @@ We can do this by having our divs take in not just one class for styling, but mu
 
 What's happening above is that initially on a normal large screen, all of the columns take up only 2 in the top container, and all of the 12 in the bottom container take up 1. When our screen gets slightly smaller, (that is when it's no longer 'lg'), we shift all of our columns to being 2 wide (which keeps our top columns in place, but gives us 2 rows of the columns in the below container!
 
- So let's make our site REALLY responsive: 
+ [So let's make our site REALLY responsive:](https://codepen.io/bdpastl/pen/oOBaKL?editors=1000) 
 
 ```html
 <!doctype html>
