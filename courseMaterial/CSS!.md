@@ -89,7 +89,7 @@ What does this mean?
 
 #### IDs
 
-Creating an ID in a stylesheet, you need to start your selector with the `#`.  [See it in action](https://codepen.io/pen/?editors=1000). 
+Creating an ID in a stylesheet, you need to start your selector with the `#`.  [See it in action](https://codepen.io/bdpastl/pen/oOgRjm). 
 
 ```html
 <!doctype html> 
@@ -111,7 +111,7 @@ The ID that we made in our `<style></style>` element is used by the `<div></div>
 
 By using the ID, we then get to turn our div's color to red! 
 
-A downside to using ID is that only one element should use it in your whole page! [We shouldn't do this](https://codepen.io/bdpastl/pen/zXxQrj?editors=1000): 
+A downside to using ID is that only one element should use it in your whole page! [We shouldn't do this](https://codepen.io/bdpastl/pen/zXxQrj): 
 
 ```html
 <!doctype html> 
@@ -136,7 +136,7 @@ This is because IDs are just that, a specific ID! It's like if somebody was tryi
 
 To share CSS among multiple elements, we should use Classes! 
 
-Instead of a `#`, we use a `.` [This way we get to share everything!](https://codepen.io/pen/?editors=1000) 
+Instead of a `#`, we use a `.` [This way we get to share everything!](https://codepen.io/bdpastl/pen/OGPYbM) 
 
 ```html
 <!doctype html>
@@ -157,7 +157,7 @@ Instead of a `#`, we use a `.` [This way we get to share everything!](https://co
 
 So, now we can use the same class over and over and over again! When we try to use the class, we add the attribute 'class' in our element, and assign it to the name of our class in the css 'IamAClass'. 
 
-[You can mix and match as many classes and IDs as you want ( remember, some classes might override others):](https://codepen.io/pen/?editors=1000)  
+[You can mix and match as many classes and IDs as you want ( remember, some classes might override others):](https://codepen.io/bdpastl/pen/MRYdoQ)  
 
 ```html
 <!doctype html>
@@ -716,7 +716,7 @@ You've seen this before, but let's style our lists not inline!    Lists are bori
 
 ##### Custom List Images: 
 
-​        Suppose you wanted to make a really bonkers list, and you wanted your own special list item image. What we're really doing is basically setting a background image for all of our list items and then we remove the actual list-style-tyle, [so that there aren't any bullets](https://codepen.io/pen/?editors=1000): 
+​        Suppose you wanted to make a really bonkers list, and you wanted your own special list item image. What we're really doing is basically setting a background image for all of our list items and then we remove the actual list-style-tyle, [so that there aren't any bullets](https://codepen.io/bdpastl/pen/xewxQG?editors=1000): 
 
 ```html
 <!doctype html>
@@ -1175,7 +1175,7 @@ Just like 'border', we can access specific sides for our [margins and padding](h
 </html>
 ```
 
-​    This looks a lot better. Let's add some padding to get some borders around our images! Also, let's add a title:
+​    This looks a lot better. Let's add some padding to get some borders around our images! [Also, let's add a title](https://codepen.io/bdpastl/pen/QPvPZw?editors=1000):
 
 ```html
 <!doctype html>
