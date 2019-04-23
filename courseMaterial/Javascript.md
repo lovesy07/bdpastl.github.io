@@ -17,7 +17,7 @@ To start out, primitive types are:
 **Booleans:** true, false // just true or false!
 **Null/Undefined:** null, undefined // You'll see these a lot, basically if something doesn't exist and we try to access it, we'll get these back in return! 
 
-### Integers and Floating Points: 
+### Numbers: 
 Open the console on codepen. In the console try writing some numbers. We can do any type of math with javascript that we could do with anything else! Here is some basic math: 
 
 ```javascript
@@ -25,7 +25,7 @@ Open the console on codepen. In the console try writing some numbers. We can do 
 41.3 - 300   // Subtraction
 10 / 3     // Division
 15 * 3     // Multiplication
-10 % 3     // Modulus
+10 % 3     // Modulus (ONLY WORKS WITH WHOLE NUMBERS)
 ```
 
 You're probably very familiar with all of these basic math operators, but you may not have seen modulus yet. Modulus is just a remainder, so in integer division, 10 divided by 3 gives us 3 remainder 1. When we use modulus, 10 % 3 = 1. 10 % 2 doesn't have any remainder, so we get: 10 % 2 = 0.
@@ -59,7 +59,11 @@ Writing out math and strings is great and all, but that's not what makes code so
 Syntax: 
 
 var variableName = someValue
-const constantName = someUNCHANGINValue
+const constantName = someUNCHANGINGValue
+
+
+
+Take a look at the below code. [Type the name of the variables in the console to see what they return:](https://codepen.io/bdpastl/pen/dLgygy?editors=0012) 
 
 ```javascript
 // Numbers!
@@ -83,7 +87,7 @@ var howLongIsSportsTeam = sportsTeam.length
 var cityNameLength = cityName.length
 ```
 
-A thing that variables can do is change! In javascript, they can change not only their value but also their type: 
+A thing that variables can do is change! In javascript, they can change not only their value but also their type. [Take a look](https://codepen.io/bdpastl/pen/axRzze?editors=0012): 
 
 ```javascript
 var food = 'pizza'
@@ -123,11 +127,11 @@ There are a number of functions we'll be using throughout the course, and most o
 
 ### console.log(): 
 
-To find out what's happening in our code, the very first function we'll look at is `console.log()`. This function takes whatever we pass into it, and logs it into the console (weird, huh?). 
+To find out what's happening in our code, the very first function we'll look at is `console.log()`. This function takes whatever we pass into it, and logs it into the console (weird, huh?). [Take a look:](https://codepen.io/bdpastl/pen/GLYgJW?editors=0012) 
 
 ```javascript
 console.log('Hello world')
-var alsoHello = 'I also want to say hello)
+var alsoHello = 'I also want to say hello'
 
 console.log(alsoHello)
 
@@ -141,7 +145,7 @@ console.log('You can concatenate too: ' + mathStuff + alsoHello)
 Console.log is incredibly useful because it lets us print out a specific variable's data to the console so we can log what's happening in our website, or just for general debugging. 
 
 ### alert():
-Arguably one of the most annoying functions, alert is a really helpful function because it quite literally alerts the user and won't let them do anything until they've acknowledged what the alert is: 
+Arguably one of the most annoying functions, alert is a really helpful function because it quite literally alerts the user and won't let them do anything until they've [acknowledged what the alert is:](https://codepen.io/bdpastl/pen/axRzNo?editors=0012) 
 
 ```javascript
 
@@ -154,13 +158,13 @@ This is often used for forgotten passwords or unsaved data, though it's not unhe
 
 ### prompt()
 
-Prompt lets us very blatantly ask questions of our users. Just like alert, we can pass a string into our prompt, but this also comes with a text box for a user response: 
+Prompt lets us very blatantly ask questions of our users. Just like alert, we can pass a string into our prompt, but this also comes with a [text box for a user response:](https://codepen.io/bdpastl/pen/yrRyOQ?editors=0012) 
 
 ```javascript
     var nameQuestion = "What is your name?" 
     prompt(nameQuestion)
 ```
-You can then enter your name. However, did you notice that nothing happened with your name? Let's try saving that data: 
+You can then enter your name. However, did you notice that nothing happened with your name? [Let's try saving that data](https://codepen.io/bdpastl/pen/NmOPrM): 
 
 ```javascript
     var nameQuestion = "What is your name?" 
@@ -226,21 +230,24 @@ In codepen, try these things:
         
 
 ### Equals / Not Equals: 
-	Unlike less than and greater than, we need to do something different with checking for equality. This is because when we use 1 equals sign, in javascript that's the 'assignment' operator which we saw above in the variables section. To check for equality, we need to use `==`. Likewise, to check for things not being equal, we need to use `!=`: 
-	    
+
+Unlike less than and greater than, we need to do something different with checking for equality. This is because when we use 1 equals sign, in javascript that's the 'assignment' operator which we saw above in the variables section. To check for equality, we need to use `==`. Likewise, to check for things not being equal, we need to use `!=`: 
+    
+
 	1 == 1 is true because one does equal one. 
 	1 == 5 is false because 5 and 1 are completely differet numbers. 
 	1 != 5 is true because 1 is not equal to 5! 
 	1 != 1 is false because 1 is equal to 1 (And by using the != operator, we're trying to see if they're not equal)
 
 You can also check strings for equality! 
-	"Strings?" == "Strings?" is true because the two strings are the exact same! 
-	"One String" == "Other String" is false because the strings don't say the same thing! 
-	"One String" != "Other string" is true because the strings don't equal each other! 
-	"Strings?" != "Strings?" is false because they are the same string, and we're checking for inequality!
-    
+``` "Strings?" == "Strings?" is true because the two strings are the exact same! 
+"One String" == "Other String" is false because the strings don't say the same thing! 
+"One String" != "Other string" is true because the strings don't equal each other! 
+"Strings?" != "Strings?" is false because they are the same string, and we're checking for inequality!
+```
 
-Hopefully those make a little bit of sense, but what's great is that we don't have to use 'literals' (that is, non-variables) to check for some sort of boolean condition: 
+
+Hopefully those make a little bit of sense, but what's great is that we don't have to use 'literals' (that is, non-variables) to check for [some sort of boolean condition:](https://codepen.io/bdpastl/pen/ZZqYBZ) 
     
 ```javascript
 var oneIsLessThanFive = 1 < 5
@@ -253,7 +260,7 @@ var oneEqualsOne = 1 == 1
 console.log("it is " + oneEqualsOne + " that one equals one!")
             
 var fiveEqualsOne = 5 == 1
-console.log("it is " + fiveEqualsOne + "that five equals one!")
+console.log("it is " + fiveEqualsOne + " that five equals one!")
             
 var oneIsNotFive = 1 != 5
 console.log("it is " + oneIsNotFive + " that one is not five")
@@ -270,17 +277,19 @@ console.log("it is " + stringInequality + " that 'One String' does not equal 'ot
 var sameStringInequality = "Strings?" != "Strings?" 
 console.log("it is " + sameStringInequality + " that 'Strings?' and 'Strings?' are not equal")
 ```
-We can save the truthiness of those operators in variables like we just did, but what makes this REALLY powerful is that we can check the truthfulness of variables themselves! We'll take the exact same code as above, but now everything will be a variable! 
+
+
+We can save the truthiness of those operators in variables like we just did, but what makes this REALLY powerful is that we can check the truthfulness of variables themselves! We'll take the exact same code as above, but now [everything will be a variable](https://codepen.io/bdpastl/pen/dLgPvp)! 
 
 ```javascript
 var one = 1
 var five = 5
     
 var oneIsLessThanFive = one < five
-console.log("it is " + oneIsLessThanFive + " that one is less than 5")
+console.log("it is " + oneIsLessThanFive + " that one is less than five")
     
 var oneIsGreaterThanFive = one > five
-console.log("it is " +oneIsGreaterThanFive + " that one is greater than 5")
+console.log("it is " +oneIsGreaterThanFive + " that one is greater than five")
     
 var oneEqualsOne = one == one
 console.log("it is " + oneEqualsOne + " that one equals one!")
@@ -310,7 +319,7 @@ console.log("it is " + sameStringInequality + " that 'Strings?' and 'Strings?' a
 
 By doing what we just did above, we can now create really powerful programs! 
 
-It is also possible to string the boolean logic together: 
+It is also possible to [string the boolean logic together:](https://codepen.io/bdpastl/pen/axRzWz) 
 
 ```javascript
 var one = 1
@@ -360,14 +369,14 @@ if(some truthy statement) {
 	// MAKE SURE TO WRAP THIS IN CURLY BRACES LIKE SO: 
 	console.log('someSpecialOutcome is happening because our truthy statement was true')
 } else {
-	console.log('some other outcome is happening if the trythy statement is false )
+	console.log('some other outcome is happening if the trythy statement is false')
 }
 ```
 
 
 
 
-Let's code this out: 
+Let's [code this out:](https://codepen.io/bdpastl/pen/bJmNWM) 
 
 ```javascript
 var snackIWillEat = 'iceCream'
@@ -376,11 +385,11 @@ if(snackIWillEat == 'iceCream'){
 	alert('I AM VERY HAPPY!')
 }
 else {
-	console.log('Well now I'm sad')
+	console.log('NOW I AM SAD')
 }
 ```
 
-This code alerted us that I was happy because I ate ice cream! What if I didn't, though? Let's try it again: 
+This code alerted us that I was happy because I ate ice cream! What if I didn't, though? [Let's try it again:](https://codepen.io/bdpastl/pen/oOagpY) 
         
 ```javascript
 var snackIWillEat = 'broccoli'
@@ -394,7 +403,7 @@ else {
 
 Now we see that in the console, I printed that I was sad. That's because 'broccoli' just isn't ice cream. 
 
-It's fun to know whether or not someone will be sad when they don't eat ice cream, BUT why are conditionals useful? What if you needed somebody to log into a website? You would need a conditional to verify that they were who they said they were! 
+It's fun to know whether or not someone will be sad when they don't eat ice cream, BUT why are conditionals useful? What if you needed somebody to log into a website? You would need a conditional to verify that [they were who they said they were!](https://codepen.io/bdpastl/pen/eoPmyq) 
     
 ```javascript
 var userName = prompt("Who are you?")
@@ -407,7 +416,7 @@ else {
 }
 ```
 
-Now, let's take a second and talk about using multiple ifs! You can "nest" if/else statments: 
+Now, let's take a second and talk about using multiple ifs! [You can "nest" if/else statments:](https://codepen.io/bdpastl/pen/ROeNQZ) 
 
 ```javascript
 var userName = prompt("Who are you?")
@@ -438,7 +447,7 @@ In codepen, try these things:
 
 ### Loops: 
 
-Loops are a way for us to do a bunch of things without writing a lot of code! Suppose I wanted to, for some crazy reason, print out "I LIKE TURTLES" 100 times. I could write: 
+Loops are a way for us to do a bunch of things without writing a lot of code! Suppose I wanted to, for some crazy reason, print out "I LIKE TURTLES" 100 times. [You could write](https://codepen.io/bdpastl/pen/qwJEoa): 
 ```javascript
 console.log("I LIKE TURTLES")
 console.log("I LIKE TURTLES")
@@ -466,7 +475,7 @@ while( SOME TRUTHY STATEMENT ) {
 }
 ```
 
-So to write "I LIKE TURTLES" 100 times to the console, I simply write: 
+So to write "I LIKE TURTLES" 100 times to the console, [you simply write:](https://codepen.io/bdpastl/pen/vMVEae) 
 ```javascript 
 var count = 0
 
@@ -476,7 +485,7 @@ while ( count < 100) {
 	}
 ```
 
-Note: If you don't have a conditional statement in the the parentheses of the while loop, it will run forever (sometimes you'll want that, but most of the time you wont)!: 
+Note: If you don't have a conditional statement in the the parentheses of the while loop, it will run forever [(sometimes you'll want that, but most of the time you wont)](https://codepen.io/bdpastl/pen/eoPmPY)!: 
         
 ```javascript 
 var count = 0
@@ -491,10 +500,14 @@ You might be wonder what the point of a loop is other than printing "I like turt
     
 ```javascript
 var count = 0
-    
+   
 while(count < 5){
+    console.log('count', count)
+  
 	var userName = prompt("Who are you?")
-    
+   
+  console.log("Your name is: ", userName)
+  
 	if(userName == "Spice Girls") {
 		alert("SPICE UP YOUR LIFE")
 	}
@@ -509,7 +522,7 @@ while(count < 5){
 }
     
 console.log("it's over!")
-}
+
 ```
 
 
@@ -531,7 +544,8 @@ for( initializer ; condition to check ; something to do after the code runs ){
 }
 ```
 
-What that looks like is: 
+[What that looks like is:](https://codepen.io/bdpastl/pen/NmOPee?editors=0012) 
+
 ```javascript 
 for (var i = 0; i < 10; i = i + 1){
 	console.log("I like to repeat myself. " + i + " times")
@@ -584,7 +598,7 @@ console.log('The third element of our array is: ' + array[2])
 
 
 
-And because our arrays are `var`s, we can change what's inside! Let's start over with our code: 
+And because our arrays are `var`s, we can change what's inside! [Let's start over with our code](https://codepen.io/bdpastl/pen/oOagmW?editors=0012): 
 
 ```javascript
 var array = [7.23, -5.3, 1.28]
@@ -607,7 +621,7 @@ You can think of what's happening in `array` as:
 
 ![Vector](../img/VectorCrossover.png)
 
-Now, what if, instead of having only 3 elements in our array, we had 100?  Instead of writing a console log for all 100 elements, we can use loops! Remember the `.length` we could use for strings? We can also use that for arrays! This is really good for knowing how many times we want to loop! Check it out: 
+Now, what if, instead of having only 3 elements in our array, we had 100?  Instead of writing a console log for all 100 elements, we can use loops! Remember the `.length` we could use for strings? We can also use that for arrays! This is really good for knowing how many times we want to loop! [Check it out:](https://codepen.io/bdpastl/pen/KYGwJL?editors=0012) 
 
 ```javascript
 var array = [7.23, -5.3, 1.28]
