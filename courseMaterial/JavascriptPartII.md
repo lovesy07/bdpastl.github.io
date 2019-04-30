@@ -112,7 +112,7 @@ var myObject = {
 
 
 
-To access the values inside of `myObject`,  you need to use the `key`. You can do that by typing something like `myObject.variableString` and that would return the sentence `'Something goes here'`. Let's try printing the elements of our object: 
+To access the values inside of `myObject`,  you need to use the `key`. You can do that by typing something like `myObject.variableString` and that would return the sentence `'Something goes here'`. Let's try printing the [elements of our object](https://codepen.io/bdpastl/pen/oORPZo?editors=0012): 
 
 ```Javascript
 var myObject = {
@@ -123,7 +123,7 @@ var myObject = {
 }
 
 
-console.lot('The insides of myObject are: ')
+console.log('The insides of myObject are: ')
 console.log(myObject.variableString)
 console.log(myObject.variableString2)
 console.log(myObject.variableNumber)
@@ -146,7 +146,7 @@ var myDetails = {
 
 
 
-Let's say for some reason, you decided that your favorite food wasn't pizza, and instead you wanted to change it to broccoli for some reason. You could change that by just reassigning it like you do with a variable! 
+Let's say for some reason, you decided that your favorite food wasn't pizza, and instead you wanted to change it to broccoli for some reason. You could change that by just [reassigning it like you do with a variable](https://codepen.io/bdpastl/pen/XQwPaN?editors=0012)! 
 
 ```javascript
 var myDetails = {
@@ -159,6 +159,15 @@ var myDetails = {
 
 // for some reason you don't like pizza anymore: 
 myDetails.favoriteFood = 'broccoli'
+
+console.log('My new details are: ')
+console.log(myDetails.name)
+console.log(myDetails.birthday)
+console.log(myDetails.favoriteFood)
+console.log(myDetails.moneys)
+console.log(myDetails.socialSecurityNumber)
+
+
 ```
 
 
@@ -203,7 +212,7 @@ var myDetails = {
 
 
 
-Now we can have a whole list of foods that we love! To access our foods, we just need to use the same notation we used with objects AND mix that with the notation we used for arrays: 
+Now we can have a whole list of foods that we love! To access our foods, we just need to use the same notation we used with objects AND [mix that with the notation we used for arrays](https://codepen.io/bdpastl/pen/eoaLGz?editors=0012): 
 
 ```javascript
 var myDetails = {
@@ -224,7 +233,7 @@ console.log('My sixth most favorite food is: ', myDetails.favoriteFood[5])
 
 
 
-That all looks fine and dandy, but wouldn't it be easier to use a loop? Maybe a for loop? 
+That all looks fine and dandy, but wouldn't it be easier to use a loop? [Maybe a for loop](https://codepen.io/bdpastl/pen/KYLxyw?editors=0012)? 
 
 ```javascript
 var myDetails = {
@@ -301,7 +310,7 @@ listName[indexPosition].key
 
 
 
-It may look weird now, but you'll get used to it. Let's try by printing our pizza list in a loop: 
+It may look weird now, but you'll get used to it. Let's try by [printing our pizza list in a loop:](https://codepen.io/bdpastl/pen/rbgZEz?editors=0012) 
 
 ```javascript
 var pizzaList =  [   
@@ -366,7 +375,7 @@ var pizzaList =  [
 
 
 
-Those pizzas look delicious, but how are we going to print them out? We know we can print an array pretty easily with a for loop. We could try to hard code everything out like we've done before: 
+Those pizzas look delicious, but how are we going to print them out? We know we can print an array pretty easily with a for loop. [We could try to hard code everything out like we've done before](https://codepen.io/bdpastl/pen/GLaXba?editors=0012): 
 
 ```javascript
 var pizzaList =  [   
@@ -411,7 +420,7 @@ for (var i = 0; i < pizzaList.length; i++){
 
 What'd you notice? There were a lot of `undefined`s printed. That's because each of the objects has an ingredients list that is a different length! The `Meat Lovers` ingredients array is 6 elements long, the `Cheese` is just 1, and the `Veggie Lovers` is 5. 
 
-Since arrays come with that fancy `.length` method, let's use it!  There's nothing that says we can't put a loop inside of a loop! Let's give it a go! 
+Since arrays come with that fancy `.length` method, let's use it!  There's nothing that says we can't put a loop inside of a loop! [Let's give it a go!](https://codepen.io/bdpastl/pen/oORPKP?editors=0012) 
 
 ```javascript
 var pizzaList =  [   
@@ -471,7 +480,7 @@ Here we are declaring a new loop, but this time we're usting `j` instead of `i`.
 
 Finally, to access each individual ingredient, notice how we're using `i` to denote which pizza we're looking at, and `j` to denote which ingredient we're looking at!
 
-Loops inside of loops are called `nested loops`. They're very powerful, but they definitely take a minute to understand, so if it doesn't make too much sense right, no worries! We'll come back to these later. For now, take a look at this code (which will print out every single `i` and `j` along with the pizzas and ingredients): 
+Loops inside of loops are called `nested loops`. They're very powerful, but they definitely take a minute to understand, so if it doesn't make too much sense right, no worries! We'll come back to these later. For now, take a look at this code [(which will print out every single `i` and `j` along with the pizzas and ingredients):](https://codepen.io/bdpastl/pen/rbgqBz?editors=0012) 
 
 ```javascript
 var pizzaList =  [   
@@ -538,7 +547,7 @@ const functionName = function() {
 
 **Note**: you first probably noticed that we said `const`. That's because if you make your function a `var` you might accidentally write over it (because you can reassign variables to a new value)!
 
-We called our function `functionName` and then assigned it the the value of `function(){  }`. What we just did was create an empty function. By using the `function()` keyword, we're saying that whenver we call this later (like when we call `console.log`) we'll get to execute whatever code we put in the body! Let's give it a quick go: 
+We called our function `functionName` and then assigned it the the value of `function(){  }`. What we just did was create an empty function. By using the `function()` keyword, we're saying that whenver we call this later (like when we call `console.log`) we'll get to execute whatever code we put in the body! [Let's give it a quick go](https://codepen.io/bdpastl/pen/vMwVBb?editors=0012): 
 
 ```javascript
 const pizzaQuestion = function() {
@@ -559,16 +568,19 @@ Now, when you have a function declared, notice that none of those console logs s
 
 #### Parameters: 
 
-One thing that makes functions really useful is that they can take in parameters! A parameter is a special value that we "pass in" to our function: 
+One thing that makes functions really useful is that they can take in parameters! A parameter is a [special value that we "pass in" to our function](https://codepen.io/bdpastl/pen/dLEgyQ?editors=0012): 
 
 ```javascript
 const functionName = function(parameter1, parameter2) {
 	console.log('Parameter 1 is ', parameter1)
   console.log('Parameter 2 is ', parameter2)
 }
+
+// call it with the name: 
+functionName('WHAT?', 'HUZZAH')
 ```
 
-By passing variables into our functions, we can work with the data we pass and do some pretty cool things!
+By passing variables into our functions, we can work with the data we pass and [do some pretty cool things](https://codepen.io/bdpastl/pen/NmVOPx?editors=0012)!
 
 ```javascript
 const doMath = function(number1, number2) {
@@ -581,7 +593,7 @@ doMath(11, 22) // this calls the function by passing in numbers to doMath!
 
 
 
-You don't have to pass in literal numbers and strings to functions! You can also pass in variables! 
+You don't have to pass in literal numbers and strings to functions! [You can also pass in variables!](https://codepen.io/bdpastl/pen/rbgqaG?editors=0012) 
 
 ```Javascript
 const doMath = function(number1, number2) {
@@ -601,7 +613,7 @@ doMath(eleven, twentyTwo) // this calls the function by passing in numbers to do
 
 #### Return Values: 
 
-Functions would be great with just the ability to store code and take in parameters, but what makes functions so powerful is that they can also return values! Let's try one with no parameters, and go back to pizza. When you return a value from a function, you need to have a variable catch it!:
+Functions would be great with just the ability to store code and take in parameters, but what makes functions so powerful is that they can also return values! Let's try one with no parameters, and go back to pizza. When you return a value from a function, [you need to have a variable catch it!](https://codepen.io/bdpastl/pen/gyJBbV?editors=0012):
 
 ```javascript 
 const pizzaQuestion = function() {
@@ -620,7 +632,7 @@ When `pizzaQuestion` returned the string `"You're getting a cheese pizza"`, it s
 
 
 
-To make our functions more dynamic, we can actually pass data into them with the paramaters, and then return some data based off of what we passed in! Let's go back to our `doMath` function: 
+To make our functions more dynamic, we can actually pass data into them with the paramaters, and then return some data based off of what we passed in! [Let's go back to our `doMath` function:](https://codepen.io/bdpastl/pen/yrWRNM?editors=0012) 
 
 ```javascript
 const doMath = function(number1, number2) {
