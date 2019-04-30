@@ -172,7 +172,9 @@ console.log(myDetails.socialSecurityNumber)
 
 
 
+### EXERCISE: 
 
+Create an object called myObject. In this object, create 5 keys, name, age, school, favoriteFood, and favoriteTvShow. Once you create this, print all of your keys! 
 
 
 
@@ -275,6 +277,16 @@ for(var i = 0; i < myDetails.favoriteFood.length; i++ ){    // use the .length!
 
 
 
+### EXERCISE: 
+
+Take the object from before and add a favorite food array!
+
+
+
+
+
+
+
 #### Arrays of Objects: 
 
 To create an array of objects, instead of using single 'primitive' types, we can use objects instead. Let's assume we're running a pizza restaurant and we need to send a list of pizza orders to our kitchen so they fire those pizzas up!
@@ -342,6 +354,10 @@ for (var i = 0; i < pizzaList.length; i++){
 ```
 
 
+
+### EXERCISE: 
+
+Create an array filled with objects. Each object needs to have `character`, `tvShow`.
 
 
 
@@ -524,6 +540,10 @@ for (var i = 0; i < pizzaList.length; i++){
 
 
 
+
+### EXERCISE: 
+
+Take your charactrer and TV show array objects from before, and now make your character key an array to have as many characters from that tvShow as you can remember! 
 
 
 
