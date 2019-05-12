@@ -28,7 +28,7 @@ e. br
 
    
 
-## True or False (2pt each)
+## True or False (2pts each)
 
 1. A **div** is a block level element  _________
 2. A **p** is is a block level element  _________
@@ -43,20 +43,39 @@ e. br
 
 
 
-## Short Answer (2.5pt each)
+## Short Answer (2.5 pts each)
 
 1. What does CSS stand for?
 2. What does HTML stand for?
 
 
 
-## Code Analysis
+## Code Analysis (10 pts)
 
 ###### styles.css
 
 ```css
-.fun-class {
-  padding: 5px;
+#container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.class-one, .class-four {
+  width: 100%;
+  height: 10vh;
+  background: red;
+}
+
+.class-two {
+  width: 20%;
+  height: 80vh;
+  background: blue;
+}
+
+.class-three {
+  width: 80%;
+  height: 80vh;
+  background: green;
 }
 ```
 
@@ -66,13 +85,50 @@ e. br
 <!doctype html>
 <html>
   <head>
-    
+    <link rel="stylesheet" href="./styles.css">
+
   </head>
   <body>
-    
+    <div id="container">
+      <div class="class-one">
+
+      </div>
+      <div class="class-two">
+
+      </div>
+      <div class="class-three">
+
+      </div>
+      <div class="class-four">
+
+      </div>
+    </div>
   </body>
 </html>
 ```
 
+Draw what the user will see in the box below. Label the areas with their colors.
 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
 
