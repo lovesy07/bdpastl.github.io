@@ -261,7 +261,7 @@ What if we wanted to spice our list up? Remember when we turned our list bullets
 First, select all of the list items `<li>`s: 
 
 ```javascript
-var myLis = document.getElementsByTagName('li')
+var myList = document.getElementsByTagName('li')
 ```
 
 Now, let's take our cat style and store it in a variable! 
@@ -279,8 +279,8 @@ Note: Above we used the tick ` (to the left of the 1) to lets us create multi-li
 Now that we have a special style, let's create a loop in the console to loop over all of our list elements and add our new style!
 
 ```javascript
-for(var i = 0; i < myLis.length; i++) {
-	myLis[i].style = myStyle
+for(var i = 0; i < myList.length; i++) {
+	myList[i].style = myStyle
 }
 ```
 
@@ -413,5 +413,113 @@ Our initial choice of styling in the previous examples was entirely for familiar
 allClasses[i].style.background = 'red'
 ```
 
-The DOM lets us access styles with the javascript dot operator. 
+The DOM lets us access styles with the javascript dot operator. While we may go back and forth in our styling, it's good to note that you can access not only the 'style' attribute, but also specific types of stylings based entirely off of the DOM's dot operators! 
+
+So far we've only worried about colration with our styling. Any styling that we've done with CSS, [we can also do here:](../classes/dom/tagExample.html) 
+
+```html
+<!doctype html>
+<html>
+  <head>
+    <title> I am a website </title>
+ </head>
+  <body>
+	<div>
+		I am a boring site.
+	</div>
+	<ul>
+		<li>Boring List</li>
+		<li>Boring List 2 </li>
+		<li>Boring List 3 </li>
+		<li>Boring List 4 </li>
+	</ul>
+  </body>
+</html>
+```
+
+Let's wrap our list in a border. First we need to select the list:
+
+```javascript
+var myList = document.querySelector('ul')
+```
+
+Now let's add a border: 
+
+```javascript
+myList.style.border = '1px solid blue'
+```
+
+
+
+#### Styling with CSS through DOM Manipulation
+
+So far we've styled entirely by adding single styles to a given class, ID, or element, but what if we wanted to give multiple styles? We could do what we did before an add one giant string of styles to our elements. That can be time consuming. 
+
+Above, when we changed our background bullets to cats, we used this simple for loop with a style string: 
+
+```javascript
+myStyle = `background-image: 	url('https://media.giphy.com/media/V0YMxvqOXOkEw/giphy.gif'); 		background-repeat: no-repeat;
+	list-style-type: none;
+	padding-left:75px;
+	padding-bottom:50px;
+`
+for(var i = 0; i < myList.length; i++) {
+	myList[i].style = myStyle
+}
+```
+
+Without the for loop that whole style sting and loop would look like: 
+
+```javascript
+myList[0].style.backgroundImage = "url('https://media.giphy.com/media/V0YMxvqOXOkEw/giphy.gif')"
+myList[0].style.backgroundRepeat = 'no-repeat'
+myList[0].style.listStyleType = 'none'
+myList[0].style.paddingLeft = '75px'
+myList[0].style.paddingBottom = '50px'
+myList[1].style.backgroundImage = "url('https://media.giphy.com/media/V0YMxvqOXOkEw/giphy.gif')"
+myList[1].style.backgroundRepeat = 'no-repeat'
+myList[1].style.listStyleType = 'none'
+myList[1].style.paddingLeft = '75px'
+myList[1].style.paddingBottom = '50px'
+myList[2].style.backgroundImage = "url('https://media.giphy.com/media/V0YMxvqOXOkEw/giphy.gif')"
+myList[2].style.backgroundRepeat = 'no-repeat'
+myList[2].style.listStyleType = 'none'
+myList[2].style.paddingLeft = '75px'
+myList[2].style.paddingBottom = '50px'
+myList[3].style.backgroundImage = "url('https://media.giphy.com/media/V0YMxvqOXOkEw/giphy.gif')"
+myList[3].style.backgroundRepeat = 'no-repeat'
+myList[3].style.listStyleType = 'none'
+myList[3].style.paddingLeft = '75px'
+myList[3].style.paddingBottom = '50px'
+```
+
+
+
+While both options work, we don't have to waste our time with either option! They're both significantly more time consuming than createing a brand new class. 
+
+Let's assume we already had a cat-class defined in our code: 
+
+```css
+.cat-class {background-image: 	url('https://media.giphy.com/media/V0YMxvqOXOkEw/giphy.gif'); 			background-repeat: no-repeat;
+	list-style-type: none;
+	padding-left:75px;
+	padding-bottom:50px;
+}
+```
+
+Now, when we want to change our bullet points, we no longer have to do all of this extra work! All we need to do is add a class to our elements: 
+
+```javascript
+ myList.classList.add('cat-class')
+```
+
+Now when we go to update our styles we can just: 
+
+```javascript
+for(var i = 0; i < myList.length; i++) {
+	myList[i].classList.add('cat-class')
+}
+```
+
+Problem solved! 
 
