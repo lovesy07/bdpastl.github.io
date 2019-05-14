@@ -523,3 +523,325 @@ for(var i = 0; i < myList.length; i++) {
 
 Problem solved! 
 
+
+
+### EXERCISE: 
+
+Take the list items on our "boring list" site, and select items and try updating them. You can update by color, font (size, family, etc.), opacity, style, etc. The goal of this is to get used to using the DOM to manipulate our sites!  
+
+
+
+
+
+## Events
+
+What makes websites reactive is that there are special things called `events`. Each event is something that happens on the website like a mouse moving over a portion of your site or clicking on a button!  A site reacts to these events by using **event handlers**. 
+
+Event handlers are javascript functions that you can attach to specific elements that handle specific user interactions! [Let's take a look at a basic list from our very first lecture:](https://codepen.io/bdpastl/pen/drjVJV) 
+
+HTML: 
+
+```html
+<!doctype html> 
+<html>
+  <head>
+  </head>
+  <body>
+    <h1> Welcome to my site! </h1> 
+    <hr />
+     <ul type='square'> 
+       <li>I really like to write code</li>
+       <li>Does that make me a square?</li>
+       <li>Some people do call me a block head...</li>
+       <li>Maybe they're just not seeing me at the right ANGLE?</li>
+     </ul>    
+  </body>
+</html>
+```
+
+
+
+[Now let's add some CSS to our site:](https://codepen.io/bdpastl/pen/XwpXZL) 
+
+```css
+    	.done {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+
+    .selected {
+      color: green;
+    }
+```
+
+
+
+Notice how nothing happened! That's because we haven't implemented any of our css classes! We don't want to hard code our classes into our site! We want to attach them to the DOM's event listeners!
+
+What we'll want to do is grab every single list item `<li>` and then attach an event listener to each. Let's grab an event: 
+
+```javascript
+var lis = document.querySelectorAll("li")
+```
+
+Now we've selected all of our `<li>`s. We'll want to add an event listener to each. But what event listeners? We want to have a `mouseover`, a `mouseout`, and a `click`.  Let's try adding those event listeners to each `<li>`  with a for loop: 
+
+```javascript
+for(var i = 0; i < lis.length; i++){
+	lis[i].addEventListener("mouseover", function(){
+		this.classList.add("selected");
+	});
+
+	lis[i].addEventListener("mouseout", function(){
+		this.classList.remove("selected");
+	});
+
+	lis[i].addEventListener("click", function(){
+		this.classList.toggle("done");
+	});
+}
+
+```
+
+ [Now, let's see what those  all look like together](https://codepen.io/bdpastl/pen/JqEGBY)! 
+
+
+
+### Why Use Event Handlers? 
+
+You may wonder why we should bother using event handlers if they're just going to put lines through list items, change colors of pages, change font sizes, but using event handlers can be an incredibly powerful tool! Let's spend the rest of today talking [about making a game!](https://codepen.io/bdpastl/pen/Bepjvx) 
+
+
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Game</title>
+	
+<body>
+<h1>
+	The Great 
+	<br>
+	<span id="colorDisplay">RGB</span> 
+	<br>
+	Color Game
+</h1>
+
+<div id="stripe">
+	<button id="reset">New Colors</button>
+	<span id="message"></span>
+	<button class="mode">Easy</button>
+	<button class="mode selected">Hard</button>
+</div>
+
+	<div id="container">
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+  </div>
+</body>
+</html>
+```
+
+
+
+CSS:
+
+```css
+body {
+	background-color: #232323;
+	margin: 0;
+	font-family: "Montserrat", "Avenir";
+}
+
+.square {
+	width: 30%;
+	background: purple;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	border-radius: 15%;
+	transition: background 0.6s;
+	-webkit-transition: background 0.6s;
+	-moz-transition: background 0.6s;
+}
+
+#container {
+	margin: 20px auto;
+	max-width: 600px;
+}
+
+h1 {
+	text-align: center;
+	line-height: 1.1;
+	font-weight: normal;
+	color: white;
+	background: steelblue;
+	margin: 0;
+	text-transform: uppercase;
+	padding: 20px 0;
+}
+
+#colorDisplay {
+	font-size: 200%;
+}
+
+#message {
+	display: inline-block;
+	width: 20%;
+}
+
+#stripe {
+	background: white;
+	height: 30px;
+	text-align: center;
+	color: black;
+}
+
+.selected {
+	color: white;
+	background: steelblue;
+}
+
+button {
+	border: none;
+	background: none;
+	text-transform: uppercase;
+	height: 100%;
+	font-weight: 700;
+	color: steelblue;
+	letter-spacing: 1px;
+	font-size: inherit;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	outline: none;
+}
+
+button:hover {
+	color: white;
+	background: steelblue;
+}
+
+```
+
+
+
+Javascript: 
+
+```javascript
+var numSquares = 6;
+var colors = [];
+var pickedColor;
+var squares = document.querySelectorAll(".square");
+var colorDisplay = document.getElementById("colorDisplay");
+var messageDisplay = document.querySelector("#message");
+var h1 = document.querySelector("h1");
+var resetButton = document.querySelector("#reset");
+var modeButtons = document.querySelectorAll(".mode");
+
+
+init();
+
+function init(){
+	setupModeButtons();
+	setupSquares();
+	reset();
+}
+
+function setupModeButtons(){
+	for(var i = 0; i < modeButtons.length; i++){
+		modeButtons[i].addEventListener("click", function(){
+			modeButtons[0].classList.remove("selected");
+			modeButtons[1].classList.remove("selected");
+			this.classList.add("selected");
+			this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
+			reset();
+		});
+	}
+}
+
+function setupSquares(){
+	for(var i = 0; i < squares.length; i++){
+	//add click listeners to squares
+		squares[i].addEventListener("click", function(){
+			//grab color of clicked square
+			var clickedColor = this.style.background;
+			//compare color to pickedColor
+			if(clickedColor === pickedColor){
+				messageDisplay.textContent = "Correct!";
+				resetButton.textContent = "Play Again?"
+				changeColors(clickedColor);
+				h1.style.background = clickedColor;
+			} else {
+				this.style.background = "#232323";
+				messageDisplay.textContent = "Try Again"
+			}
+		});
+	}
+}
+
+
+function reset(){
+	colors = generateRandomColors(numSquares);
+	//pick a new random color from array
+	pickedColor = pickColor();
+	//change colorDisplay to match picked Color
+	colorDisplay.textContent = pickedColor;
+	resetButton.textContent = "New Colors"
+	messageDisplay.textContent = "";
+	//change colors of squares
+	for(var i = 0; i < squares.length; i++){
+		if(colors[i]){
+			squares[i].style.display = "block"
+			squares[i].style.background = colors[i];
+		} else {
+			squares[i].style.display = "none";
+		}
+	}
+	h1.style.background = "steelblue";
+}
+
+resetButton.addEventListener("click", function(){
+	reset();
+})
+
+function changeColors(color){
+	//loop through all squares
+	for(var i = 0; i < squares.length; i++){
+		//change each color to match given color
+		squares[i].style.background = color;
+	}
+}
+
+function pickColor(){
+	var random = Math.floor(Math.random() * colors.length);
+	return colors[random];
+}
+
+function generateRandomColors(num){
+	//make an array
+	var arr = []
+	//repeat num times
+	for(var i = 0; i < num; i++){
+		//get random color and push into arr
+		arr.push(randomColor())
+	}
+	//return that array
+	return arr;
+}
+
+function randomColor(){
+	//pick a "red" from 0 - 255
+	var r = Math.floor(Math.random() * 256);
+	//pick a "green" from  0 -255
+	var g = Math.floor(Math.random() * 256);
+	//pick a "blue" from  0 -255
+	var b = Math.floor(Math.random() * 256);
+	return "rgb(" + r + ", " + g + ", " + b + ")";
+}
+```
