@@ -67,6 +67,114 @@ Notice that when the page renders, even though we have a lot more in our body no
 
 ## Working with built in Javascript Functions: 
 
+### Revisiting Alert and Confirm: 
+
+Previously, we've seen how alert and confirm work. Now we're going to actually use them and understand what's actually happening! 
+
+A lot of times on your site, you'll want to ask a user something. For now, [let's just look at a yes or no:](https://codepen.io/bdpastl/pen/MdwQJL?editors=1001) 
+
+```html
+<!doctype html>
+<html>
+  <head>
+    <script>
+      const sayHello = function(){
+        confirm('Hello friend! How are you?');
+      }
+    </script>
+</head>
+
+<body>
+  <button onClick='sayHello()'> Press me to say hi! </button>
+</body>
+
+</html>
+```
+
+
+
+You've seen this kind of popup before. But what we haven't talked about before is what that `confirm` is returning. Remember how we could return values from our javascript functions? [Guess what! `confirm` is returning something too!](https://codepen.io/bdpastl/pen/mYJXmm?editors=1001) 
+
+```html
+<!doctype html>
+<html>
+  <head>
+    <script>
+      const sayHello = function(){
+        var confirmResponse = confirm('Hello friend! How are you?');
+        
+        console.log('Confirm response is: ', confirmResponse)
+      }
+    </script>
+</head>
+
+<body>
+  <button onClick='sayHello()'> Press me to say hi! </button>
+</body>
+
+</html>
+```
+
+Notice that the confirm returns either true or false! We can take that data, [and use it with conditionals](https://codepen.io/bdpastl/pen/QRbVLN?editors=1011)! 
+
+```html
+<!doctype html>
+<html>
+  <head>
+    <script>
+      const sayHello = function(){
+        var confirmResponse = confirm('Hello friend! How are you?');
+        
+        // we could write "confirmResponse === true" but since it's already 
+        // either true or false, we can just leave it as "confirmResponse"
+        if (confirmResponse) {    
+          alert('You pressed ok!')
+        } else {
+          alert('You pressed cancel!')
+        }
+        
+        console.log('Confirm response is: ', confirmResponse)
+      }
+    </script>
+  </head>
+
+  <body>
+    <button onClick='sayHello()'> Press me to say hi! </button>
+  </body>
+
+</html>
+```
+
+
+
+### Take in strings with Prompt: 
+
+There are a number of ways to take in user data. Let's look at how to take in string data. Prompt prompts the user to [enter something into a text field:](https://codepen.io/bdpastl/pen/NVqLqx?editors=1011) 
+
+```html
+<!doctype html>
+<html>
+  <head>
+    <script>
+      const sayHello = function(){
+        var promptResponse = prompt("Hi there! What's your name?", 
+                                    "Write some cool name here!");
+
+				alert("Hi there " + promptResponse + ", pleased to meet you!")
+        console.log("prompt response = " + promptResponse)
+      }
+    </script>
+  </head>
+
+  <body>
+    <button onClick='sayHello()'> Press me to say hi! </button>
+  </body>
+
+</html>
+```
+
+
+
 ### Working with Document.write(): 
 
 Sometimes you'll want to write something to the page. Javascript comes with a lot of built in functions! By using the built in function `document.write()`, we can actually use javascript to write something to our page!  `document.write()` works a lot like `console.log()`, where whatever you put in the parentheses is what gets displayed, but this time, it'll get displayed on our page!  [Let's try it out:](https://codepen.io/bdpastl/pen/pmJpad?editors=1001) 
@@ -128,58 +236,4 @@ Since we've already covered functions, you're probably wondering "what if we put
 ```
 
 You bet your bottom dollar we can! But what happened to our button and all of our text?!  `document.write` is a very useful function for a lot of reasons, but, you should most definitely avoid trying to use it to write things to your page after your page has loaded because it ultimately rewrites the whole page! We'll get to how to do that a little bit later. For now, though, `document.write` is something that could be very useful to display a time, or a number of page visits, or any number of things when the page is first loading! 
-
-
-
-### Revisiting Alert and Confirm: 
-
-Previously, we've seen how alert and confirm work. Now we're going to actually use them and understand what's actually happening! 
-
-A lot of times on your site, you'll want to ask a user something. For now, [let's just look at a yes or no:](https://codepen.io/bdpastl/pen/MdwQJL?editors=1001) 
-
-```html
-<!doctype html>
-<html>
-  <head>
-    <script>
-      const sayHello = function(){
-        confirm('Hello friend! How are you?');
-      }
-    </script>
-</head>
-
-<body>
-  <button onClick='sayHello()'> Press me to say hi! </button>
-</body>
-
-</html>
-```
-
-
-
-You've seen this kind of popup before. But what we haven't talked about before is what that `confirm` is returning. Remember how we could return values from our javascript functions? [Guess what! `confirm` is returning something too!](https://codepen.io/bdpastl/pen/mYJXmm?editors=1001) 
-
-```html
-<!doctype html>
-<html>
-  <head>
-    <script>
-      const sayHello = function(){
-        var confirmResponse = confirm('Hello friend! How are you?');
-        
-        console.log('Confirm response is: ', confirmResponse)
-      }
-    </script>
-</head>
-
-<body>
-  <button onClick='sayHello()'> Press me to say hi! </button>
-</body>
-
-</html>
-```
-
-
-
-
 
