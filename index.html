@@ -1,491 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- This is the free demo GAIA from creative tim! You can find free demos all around the web! This is just one of them tailored to our needs! -->
-
 <head>
-    <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>BDPASTL: HSCC</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <link href="assets/css/gaia.css" rel="stylesheet"/>
-
-    <!--     Fonts and icons     -->
-    <link href='https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600' rel='stylesheet' type='text/css'>
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
-    <style>
-        .cardSize {
-            height: 300px; 
-        }
-        .mapSize {
-            width: 100%;
-        }
-    </style>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
 </head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="200">
-        <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
-        <div class="container">
-            <div class="navbar-header">
-                <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar bar1"></span>
-                    <span class="icon-bar bar2"></span>
-                    <span class="icon-bar bar3"></span>
-                </button>
-                <a href="bdpastl.github.io" class="navbar-brand">
-                    BDPAStL
-                </a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right navbar-uppercase">
-                    <li class="dropdown">
-                        <a href="#gaia" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-share-alt"></i> Share
-                        </a>
-                        <ul class="dropdown-menu dropdown-danger">
-                            <li>
-                                <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="https://www.bdpa.org/" class="btn btn-danger btn-fill">National Organization</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-    </nav>
+<div class="jumbotron text-center">
+  <h1>Company</h1> 
+  <p>We specialize in blablabla</p> 
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form>
+</div>
 
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Company Page</h2><br>
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
 
-    <div class="section section-header">
-        <div class="parallax filter filter-color-red">
-            <div class="image"
-                style="background-image: url(assets/img/backgroundImages/arch.jpg)">
-            </div>
-            <div class="container">
-                <div class="content">
-                    <div class="title-area">
-                        <p>BDPA STL</p>
-                        <h1 class="title-modern">High School Computer Science Training</h1>
-                        <h3>Learn to code!</h3>
-                        <div class="separator line-separator">♦</div>
-                    </div>
-                </div>
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2><br>
+      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
 
-            </div>≠
-        </div>
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>POWER</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>LOVE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>JOB DONE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>GREEN</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>CERTIFIED</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:#303030;">HARD WORK</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Portfolio</h2><br>
+  <h4>What we have created</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="paris.jpg" alt="Paris" width="400" height="300">
+        <p><strong>Paris</strong></p>
+        <p>Yes, we built Paris</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="newyork.jpg" alt="New York" width="400" height="300">
+        <p><strong>New York</strong></p>
+        <p>We built New York</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
+        <p><strong>San Francisco</strong></p>
+        <p>Yes, San Fran is ours</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>What our customers say</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+      </div>
+      <div class="item">
+        <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+      </div>
     </div>
 
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
 
-    <div class="section">
-        <div class="container">
-            <div class="row">
-                <div class="title-area">
-                    <h2>About Us</h2>
-                    <div class="separator separator-danger">✻</div>
-                    <p class="description">
-                        We are the St. Louis chapter of the National BDPA. For more than 40 years, 
-                        BDPA has enabled the upward mobility of African Americans and other minorities in the
-                        Information Technology (IT) and STEM fields.
-                    </p>
-                    <br>
-                    <p> 
-                        BDPA has been a leader and pioneer in technology and STEM training for IT professionals and High School students since
-                        1986. Our National High School Computer Competition (HSCC) program which is a hands-on training program, has introduced
-                        tens of thousands of high school students to coding and application development while also presenting opportunities for
-                        students to obtain college scholarships due to the generosity of our sponsors and partners. 
-                    </p>
-                <br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="info-icon">
-                        <div class="icon text-danger">
-                            <i class="pe-7s-map-2"></i>
-                        </div>
-                        <h3>HSCC Training</h3>
-                        <p class="description">A hands-on introductory web development course. Starting from knowing no code, you can learn HTML, CSS, Javascript, PHP, and MySQL. </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="info-icon">
-                        <div class="icon text-danger">
-                            <i class="pe-7s-graph1"></i>
-                        </div>
-                        <h3>IT Showcase Mentoring</h3>
-                        <p class="description">Get a mentor to help guide you through creating a competition ready paper, scientific poster, and presentation.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="info-icon">
-                        <div class="icon text-danger">
-                            <i class="pe-7s-phone"></i>
-                        </div>
-                        <h3>Mobile Application Showcase Mentoring</h3>
-                        <p class="description">Interested in taking what you've learned and transferring it to mobile development? Get a mentor to help guide you through creating a mobile application!</p>
-                    </div>
-                </div>
-            </div>
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Choose a payment plan that works for you</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Basic</h1>
         </div>
-    </div>
-
-
-    <div class="section section-our-team-freebie">
-        <div class="parallax filter filter-color-black">
-            <div class="image" style="background-image:url('assets/img/backgroundImages/brick.jpg')">
-            </div>
-            <div class="container">
-                <div class="content">
-                    <div class="row">
-                        <div class="title-area">
-                            <h2>Curriculum</h2>
-                            <div class="separator separator-danger">✻</div>
-                            <p class="description">Below are the materials you'll need to learn web programming!</p>
-                        </div>
-                    </div>
-
-                    <div class="team">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="card card-member cardSize">
-                                                <a href='./homework/Homework 1.html'>
-                                                    <div class="content">
-                                                        <div class="avatar avatar-danger">
-                                                            <img alt="..." class="img-circle" src="./assets/img/lessonIcons/toDownload.png"/>
-                                                        </div>
-                                                        <div class="description">
-                                                            <h3 class="title">Setup</h3>
-                                                            <p class="description">This is the setup you'll need for the first portion of the course.</p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="card card-member cardSize">
-                                                <a href="./classes/HTML.html">
-                                                    <div class="content">
-                                                        <div class="avatar avatar-danger">
-                                                            <img alt="..." class="img-circle" src="./assets/img/lessonIcons/html.png"/>
-                                                        </div>
-                                                        <div class="description">
-                                                            <h3 class="title">HTML</h3>
-                                                            <p class="description">Here is where we dive into html! These are the basics to how every website works!</p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="card card-member cardSize">
-                                                <a href="./classes/CSS.html">
-                                                    <div class="content">
-                                                        <div class="avatar avatar-danger">
-                                                            <img alt="..." class="img-circle" src="./assets/img/lessonIcons/css.png"/>
-                                                        </div>
-                                                        <div class="description">
-                                                            <h3 class="title">CSS</h3>
-                                                            <p class="description">CSS is how we style our sites! This is where we'll learn to properly style our pages!</p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-    
-                                </div>
-                                <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="card card-member cardSize">
-                                                <a href="./classes/BOOTSTRAP!.html">
-                                                    <div class="content">
-                                                        <div class="avatar avatar-danger">
-                                                            <img alt="..." class="img-circle" src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg"/>
-                                                        </div>
-                                                        <div class="description">
-                                                            <h3 class="title">Bootstrap</h3>
-                                                            <p class="description">Instead of spending all of our time styling, others have already put frameworks together! Let's learn some bootstrap!</p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="card card-member cardSize">
-                                                <a href="./classes/TeamWebPage.html">
-                                                    <div class="content">
-                                                        <div class="avatar avatar-danger">
-                                                            <img alt="..." class="img-circle" src="./assets/img/lessonIcons/teamwork.jpg"/>
-                                                        </div>
-                                                        <div class="description">
-                                                            <h3 class="title">Team Work!</h3>
-                                                            <p class="description">Working on a team is how most software gets written! Let's try our hand(s) at it!</p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="card card-member cardSize">
-                                                <a href="./classes/BuildBootstrap.html">
-                                                    <div class="content">
-                                                        <div class="avatar avatar-danger">
-                                                            <img alt="..." class="img-circle" src="./assets/img/lessonIcons/template.jpg"/>
-                                                        </div>
-                                                        <div class="description">
-                                                            <h3 class="title">Bootstrap Templates!</h3>
-                                                            <p class="description">You've worked on html, css, bootstrap, and worked on a team now! It's time for you to use a template and see how it works! </p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-    
-                                </div>
-                                <div class="row">
-                                        <div class="col-md-4">
-                                            <a href="./classes/Javascript.html">
-                                                <div class="card card-member cardSize">
-                                                    <div class="content">
-                                                        <div class="avatar avatar-danger">
-                                                            <img alt="..." class="img-circle" src="./assets/img/lessonIcons/javascript.jpg"/>
-                                                        </div>
-                                                        <div class="description">
-                                                            <h3 class="title">Javascript 1</h3>
-                                                            <p class="description">Here are the foundations of Javascript! Javascript is how we make our sites dynamic, but first, we have to learn the basics!</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                      <div class="col-md-4">
-                                            <div class="card card-member cardSize">
-                                                <a href="./homework/javascriptHomework.html">
-                                                    <div class="content">
-                                                        <div class="avatar avatar-danger">
-                                                            <img alt="..." class="img-circle" src="assets/img/lessonIcons/js.jpg"/>
-                                                        </div>
-                                                        <div class="description">
-                                                            <h3 class="title">Javascript Homework</h3>
-                                                            <p class="description">Test your javascript skills!</p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="card card-member cardSize">
-                                                <a href="./classes/JavascriptPartII.html">
-                                                    <div class="content">
-                                                        <div class="avatar avatar-danger">
-                                                            <img alt="..." class="img-circle" src="assets/img/lessonIcons/coffee.jpg"/>
-                                                        </div>
-                                                        <div class="description">
-                                                            <h3 class="title">Javascript 2!</h3>
-                                                            <p class="description">Now that the basics are out of the way, let's try working with functions, objects, and then
-                                                                integrating javascript into our sites!</p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    <div class="col-md-4">
-                                        <div class="card card-member cardSize">
-                                            <a href="./classes/JavascriptandWebPages!.html">
-                                            <div class="content">
-                                                <div class="avatar avatar-danger">
-                                                    <img alt="..." class="img-circle" src="assets/img/lessonIcons/screenCode.jpg" />
-                                                </div>
-                                                <div class="description">
-                                                    <h3 class="title">Javascript and Web Pages! !</h3>
-                                                    <p class="description"> Now it's time to mix what we've learned into one! </p>
-                                                </div>
-                                            </div>
-                                            </a>
-                                        </div>
-                                    </div> 
-                                    <div class="col-md-4">
-                                        <div class="card card-member cardSize">
-                                            <a href="./classes/DOM.html">
-                                                <div class="content">
-                                                    <div class="avatar avatar-danger">
-                                                        <img alt="..." class="img-circle"
-                                                            src="assets/img/lessonIcons/js.jpg" />
-                                                    </div>
-                                                    <div class="description">
-                                                        <h3 class="title">THE DOM</h3>
-                                                        <p class="description">Javascript and HTML!</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="panel-body">
+          <p><strong>20</strong> Lorem</p>
+          <p><strong>15</strong> Ipsum</p>
+          <p><strong>5</strong> Dolor</p>
+          <p><strong>2</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
         </div>
-    </div>
-
-
-    <div class="section">
-            <div class="container">
-                <div class="row">
-                        <h3>Where are our students from?</h3>
-                               <!--Google map-->
-                               <div id="map-container-google-1" class="z-depth-1-half map-container">
-                                    <iframe src="https://maps.google.com/maps?q=stlouis&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                                        style="border:0; width:100%; height: 600px" allowfullscreen></iframe>
-                                </div>
-                   
-                </div>
-               
-            </div>
-             
- 
-
-    </div>
-
-    <footer class="footer footer-big footer-color-black" data-color="black">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-sm-3">
-                    <div class="info">
-                        <h5 class="title">Company</h5>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href="#">Home</a></li>
-                                <li>
-                                    <a href="#">Find offers</a>
-                                </li>
-                                <li>
-                                    <a href="#">Discover Projects</a>
-                                </li>
-                                <li>
-                                    <a href="#">Our Portfolio</a>
-                                </li>
-                                <li>
-                                    <a href="#">About Us</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="col-md-3 col-md-offset-1 col-sm-3">
-                    <div class="info">
-                        <h5 class="title"> Help and Support</h5>
-                         <nav>
-                            <ul>
-                                <li>
-                                    <a href="#">Contact Us</a>
-                                </li>
-                                <li>
-                                    <a href="#">How it works</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3">
-                    <div class="info">
-                        <h5 class="title">Latest News</h5>
-                        Student sites are up!
-                    </div>
-                </div>
-                <div class="col-md-2 col-md-offset-1 col-sm-3">
-                    <div class="info">
-                        <h5 class="title">Follow us on</h5>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href="#" class="btn btn-social btn-facebook btn-simple">
-                                        <i class="fa fa-facebook-square"></i> Facebook
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-social btn-dribbble btn-simple">
-                                        <i class="fa fa-dribbble"></i> Dribbble
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-social btn-twitter btn-simple">
-                                        <i class="fa fa-twitter"></i> Twitter
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-social btn-reddit btn-simple">
-                                        <i class="fa fa-google-plus-square"></i> Google+
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="copyright">
-                 © <script> document.write(new Date().getFullYear()) </script> BDPA HSCC
-            </div>
+        <div class="panel-footer">
+          <h3>$19</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
         </div>
-    </footer>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Pro</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>50</strong> Lorem</p>
+          <p><strong>25</strong> Ipsum</p>
+          <p><strong>10</strong> Dolor</p>
+          <p><strong>5</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$29</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>100</strong> Lorem</p>
+          <p><strong>50</strong> Ipsum</p>
+          <p><strong>25</strong> Dolor</p>
+          <p><strong>10</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
 
 </body>
-<script>
-    function initMap() {
-        var myLatLng = { lat: 38.6582078, lng: -90.3547124 };
-        var map = new google.maps.Map(document.getElementById('map-container-google-1'), {
-            zoom: 11,
-            center: myLatLng
-        });
-
-
-        const hazelwoodCentral = {name: "hazelwood", latlong: {lat:38.83012, lng:-90.3180721 }}
-        const pattonville = {name: "pattonville", latlong: { lat:38.7415886, lng: -90.4566621}}
-        const micds =  {name: "micds", latlong: { lat:38.6582452, lng: -90.3996357}}
-
-        const schoolList = [hazelwoodCentral, pattonville, micds]
-
-        const markers = schoolList.map( school => {
-            return new google.maps.Marker({
-                position: school.latlong,
-                map: map,
-                title: school.name,
-            })
-        })
-    }
-</script></script>
-<!--   core js files    -->
-<script src="assets/js/jquery.min.js" type="text/javascript"></script>
-<script src="assets/js/bootstrap.js" type="text/javascript"></script>
-
-<!--  js library for devices recognition -->
-<script type="text/javascript" src="assets/js/modernizr.js"></script>
-
-<!--  script for google maps   -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-
-<!--   file where we handle all the script from the Gaia - Bootstrap Template   -->
-<script type="text/javascript" src="assets/js/gaia.js"></script>
-
 </html>
