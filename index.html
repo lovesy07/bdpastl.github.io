@@ -1,450 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- This is the free demo GAIA from creative tim! You can find free demos all around the web! This is just one of them tailored to our needs! -->
+
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme The Band</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <style>
-  body {
-    font: 400 15px/1.8 Lato, sans-serif;
-    color: #777;
-  }
-  h3, h4 {
-    margin: 10px 0 30px 0;
-    letter-spacing: 10px;      
-    font-size: 20px;
-    color: #111;
-  }
-  .container {
-    padding: 80px 120px;
-  }
-  .person {
-    border: 10px solid transparent;
-    margin-bottom: 25px;
-    width: 80%;
-    height: 80%;
-    opacity: 0.7;
-  }
-  .person:hover {
-    border-color: #f1f1f1;
-  }
-  .carousel-inner img {
-    -webkit-filter: grayscale(90%);
-    filter: grayscale(90%); /* make all photos black and white */ 
-    width: 100%; /* Set width to 100% */
-    margin: auto;
-  }
-  .carousel-caption h3 {
-    color: #fff !important;
-  }
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
-  .bg-1 {
-    background: #2d2d30;
-    color: #bdbdbd;
-  }
-  .bg-1 h3 {color: #fff;}
-  .bg-1 p {font-style: italic;}
-  .list-group-item:first-child {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-  }
-  .list-group-item:last-child {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  .thumbnail {
-    padding: 0 0 15px 0;
-    border: none;
-    border-radius: 0;
-  }
-  .thumbnail p {
-    margin-top: 15px;
-    color: #555;
-  }
-  .btn {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #f1f1f1;
-    border-radius: 0;
-    transition: .2s;
-  }
-  .btn:hover, .btn:focus {
-    border: 1px solid #333;
-    background-color: #fff;
-    color: #000;
-  }
-  .modal-header, h4, .close {
-    background-color: #333;
-    color: #fff !important;
-    text-align: center;
-    font-size: 30px;
-  }
-  .modal-header, .modal-body {
-    padding: 40px 50px;
-  }
-  .nav-tabs li a {
-    color: #777;
-  }
-  #googleMap {
-    width: 100%;
-    height: 400px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-  }  
-  .navbar {
-    font-family: Montserrat, sans-serif;
-    margin-bottom: 0;
-    background-color: #2d2d30;
-    border: 0;
-    font-size: 11px !important;
-    letter-spacing: 4px;
-    opacity: 0.9;
-  }
-  .navbar li a, .navbar .navbar-brand { 
-    color: #d5d5d5 !important;
-  }
-  .navbar-nav li a:hover {
-    color: #fff !important;
-  }
-  .navbar-nav li.active a {
-    color: #fff !important;
-    background-color: #29292c !important;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-  }
-  .open .dropdown-toggle {
-    color: #fff;
-    background-color: #555 !important;
-  }
-  .dropdown-menu li a {
-    color: #000 !important;
-  }
-  .dropdown-menu li a:hover {
-    background-color: red !important;
-  }
-  footer {
-    background-color: #2d2d30;
-    color: #f5f5f5;
-    padding: 32px;
-  }
-  footer a {
-    color: #f5f5f5;
-  }
-  footer a:hover {
-    color: #777;
-    text-decoration: none;
-  }  
-  .form-control {
-    border-radius: 0;
-  }
-  textarea {
-    resize: none;
-  }
-  </style>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>BDPASTL: HSCC</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/gaia.css" rel="stylesheet"/>
+
+    <!--     Fonts and icons     -->
+    <link href='https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
+    <style>
+        .cardSize {
+            height: 300px; 
+        }
+        .mapSize {
+            width: 100%;
+        }
+    </style>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#myPage">HOME</a></li>
-        <li><a href="#band">BAND</a></li>
-        <li><a href="#tour">TOUR</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Merchandise</a></li>
-            <li><a href="#">Extras</a></li>
-            <li><a href="#">Media</a></li> 
-          </ul>
-        </li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<body>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="ny.jpg" alt="New York" width="1200" height="700">
-        <div class="carousel-caption">
-          <h3>New York</h3>
-          <p>The atmosphere in New York is lorem ipsum.</p>
-        </div>      
-      </div>
-
-      <div class="item">
-        <img src="chicago.jpg" alt="Chicago" width="1200" height="700">
-        <div class="carousel-caption">
-          <h3>Chicago</h3>
-          <p>Thank you, Chicago - A night we won't forget.</p>
-        </div>      
-      </div>
-    
-      <div class="item">
-        <img src="la.jpg" alt="Los Angeles" width="1200" height="700">
-        <div class="carousel-caption">
-          <h3>LA</h3>
-          <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
-        </div>      
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-</div>
-
-<!-- Container (The Band Section) -->
-<div id="band" class="container text-center">
-  <h3>THE BAND</h3>
-  <p><em>We love music!</em></p>
-  <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
-      <a href="#demo" data-toggle="collapse">
-        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo" class="collapse">
-        <p>Guitarist and Lead Vocalist</p>
-        <p>Loves long walks on the beach</p>
-        <p>Member since 1988</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
-      <a href="#demo2" data-toggle="collapse">
-        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo2" class="collapse">
-        <p>Drummer</p>
-        <p>Loves drummin'</p>
-        <p>Member since 1988</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
-      <a href="#demo3" data-toggle="collapse">
-        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo3" class="collapse">
-        <p>Bass player</p>
-        <p>Loves math</p>
-        <p>Member since 2005</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Container (TOUR Section) -->
-<div id="tour" class="bg-1">
-  <div class="container">
-    <h3 class="text-center">TOUR DATES</h3>
-    <p class="text-center">Lorem ipsum we'll play you some music.<br> Remember to book your tickets!</p>
-    <ul class="list-group">
-      <li class="list-group-item">September <span class="label label-danger">Sold Out!</span></li>
-      <li class="list-group-item">October <span class="label label-danger">Sold Out!</span></li> 
-      <li class="list-group-item">November <span class="badge">3</span></li> 
-    </ul>
-    
-    <div class="row text-center">
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="paris.jpg" alt="Paris" width="400" height="300">
-          <p><strong>Paris</strong></p>
-          <p>Friday 27 November 2015</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="newyork.jpg" alt="New York" width="400" height="300">
-          <p><strong>New York</strong></p>
-          <p>Saturday 28 November 2015</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
-          <p><strong>San Francisco</strong></p>
-          <p>Sunday 29 November 2015</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">×</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
-        </div>
-        <div class="modal-body">
-          <form role="form">
-            <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
-              <input type="number" class="form-control" id="psw" placeholder="How many?">
+    <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="200">
+        <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
+        <div class="container">
+            <div class="navbar-header">
+                <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar bar1"></span>
+                    <span class="icon-bar bar2"></span>
+                    <span class="icon-bar bar3"></span>
+                </button>
+                <a href="bdpastl.github.io" class="navbar-brand">
+                    BDPAStL
+                </a>
             </div>
-            <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right navbar-uppercase">
+                    <li class="dropdown">
+                        <a href="#gaia" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-share-alt"></i> Share
+                        </a>
+                        <ul class="dropdown-menu dropdown-danger">
+                            <li>
+                                <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://www.bdpa.org/" class="btn btn-danger btn-fill">National Organization</a>
+                    </li>
+                </ul>
             </div>
-              <button type="submit" class="btn btn-block">Pay 
-                <span class="glyphicon glyphicon-ok"></span>
-              </button>
-          </form>
+            <!-- /.navbar-collapse -->
         </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
-            <span class="glyphicon glyphicon-remove"></span> Cancel
-          </button>
-          <p>Need <a href="#">help?</a></p>
+    </nav>
+
+
+    <div class="section section-header">
+        <div class="parallax filter filter-color-red">
+            <div class="image"
+                style="background-image: url(assets/img/backgroundImages/arch.jpg)">
+            </div>
+            <div class="container">
+                <div class="content">
+                    <div class="title-area">
+                        <p>BDPA STL</p>
+                        <h1 class="title-modern">High School Computer Science Training</h1>
+                        <h3>Learn to code!</h3>
+                        <div class="separator line-separator">♦</div>
+                    </div>
+                </div>
+
+            </div>≠
         </div>
-      </div>
     </div>
-  </div>
-</div>
 
-<!-- Container (Contact Section) -->
-<div id="contact" class="container">
-  <h3 class="text-center">Contact</h3>
-  <p class="text-center"><em>We love our fans!</em></p>
 
-  <div class="row">
-    <div class="col-md-4">
-      <p>Fan? Drop a note.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span>Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
-    </div>
-    <div class="col-md-8">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="title-area">
+                    <h2>About Us</h2>
+                    <div class="separator separator-danger">✻</div>
+                    <p class="description">
+                        We are the St. Louis chapter of the National BDPA. For more than 40 years, 
+                        BDPA has enabled the upward mobility of African Americans and other minorities in the
+                        Information Technology (IT) and STEM fields.
+                    </p>
+                    <br>
+                    <p> 
+                        BDPA has been a leader and pioneer in technology and STEM training for IT professionals and High School students since
+                        1986. Our National High School Computer Competition (HSCC) program which is a hands-on training program, has introduced
+                        tens of thousands of high school students to coding and application development while also presenting opportunities for
+                        students to obtain college scholarships due to the generosity of our sponsors and partners. 
+                    </p>
+                <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info-icon">
+                        <div class="icon text-danger">
+                            <i class="pe-7s-map-2"></i>
+                        </div>
+                        <h3>HSCC Training</h3>
+                        <p class="description">A hands-on introductory web development course. Starting from knowing no code, you can learn HTML, CSS, Javascript, PHP, and MySQL. </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-icon">
+                        <div class="icon text-danger">
+                            <i class="pe-7s-graph1"></i>
+                        </div>
+                        <h3>IT Showcase Mentoring</h3>
+                        <p class="description">Get a mentor to help guide you through creating a competition ready paper, scientific poster, and presentation.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-icon">
+                        <div class="icon text-danger">
+                            <i class="pe-7s-phone"></i>
+                        </div>
+                        <h3>Mobile Application Showcase Mentoring</h3>
+                        <p class="description">Interested in taking what you've learned and transferring it to mobile development? Get a mentor to help guide you through creating a mobile application!</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+    </div>
+
+
+    <div class="section section-our-team-freebie">
+        <div class="parallax filter filter-color-black">
+            <div class="image" style="background-image:url('assets/img/backgroundImages/brick.jpg')">
+            </div>
+            <div class="container">
+                <div class="content">
+                    <div class="row">
+                        <div class="title-area">
+                            <h2>Curriculum</h2>
+                            <div class="separator separator-danger">✻</div>
+                            <p class="description">Below are the materials you'll need to learn web programming!</p>
+                        </div>
+                    </div>
+
+                    <div class="team">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card card-member cardSize">
+                                                <a href='./homework/Homework 1.html'>
+                                                    <div class="content">
+                                                        <div class="avatar avatar-danger">
+                                                            <img alt="..." class="img-circle" src="./assets/img/lessonIcons/toDownload.png"/>
+                                                        </div>
+                                                        <div class="description">
+                                                            <h3 class="title">Setup</h3>
+                                                            <p class="description">This is the setup you'll need for the first portion of the course.</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card card-member cardSize">
+                                                <a href="./classes/HTML.html">
+                                                    <div class="content">
+                                                        <div class="avatar avatar-danger">
+                                                            <img alt="..." class="img-circle" src="./assets/img/lessonIcons/html.png"/>
+                                                        </div>
+                                                        <div class="description">
+                                                            <h3 class="title">HTML</h3>
+                                                            <p class="description">Here is where we dive into html! These are the basics to how every website works!</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card card-member cardSize">
+                                                <a href="./classes/CSS.html">
+                                                    <div class="content">
+                                                        <div class="avatar avatar-danger">
+                                                            <img alt="..." class="img-circle" src="./assets/img/lessonIcons/css.png"/>
+                                                        </div>
+                                                        <div class="description">
+                                                            <h3 class="title">CSS</h3>
+                                                            <p class="description">CSS is how we style our sites! This is where we'll learn to properly style our pages!</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+    
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card card-member cardSize">
+                                                <a href="./classes/BOOTSTRAP!.html">
+                                                    <div class="content">
+                                                        <div class="avatar avatar-danger">
+                                                            <img alt="..." class="img-circle" src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg"/>
+                                                        </div>
+                                                        <div class="description">
+                                                            <h3 class="title">Bootstrap</h3>
+                                                            <p class="description">Instead of spending all of our time styling, others have already put frameworks together! Let's learn some bootstrap!</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card card-member cardSize">
+                                                <a href="./classes/TeamWebPage.html">
+                                                    <div class="content">
+                                                        <div class="avatar avatar-danger">
+                                                            <img alt="..." class="img-circle" src="./assets/img/lessonIcons/teamwork.jpg"/>
+                                                        </div>
+                                                        <div class="description">
+                                                            <h3 class="title">Team Work!</h3>
+                                                            <p class="description">Working on a team is how most software gets written! Let's try our hand(s) at it!</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card card-member cardSize">
+                                                <a href="./classes/BuildBootstrap.html">
+                                                    <div class="content">
+                                                        <div class="avatar avatar-danger">
+                                                            <img alt="..." class="img-circle" src="./assets/img/lessonIcons/template.jpg"/>
+                                                        </div>
+                                                        <div class="description">
+                                                            <h3 class="title">Bootstrap Templates!</h3>
+                                                            <p class="description">You've worked on html, css, bootstrap, and worked on a team now! It's time for you to use a template and see how it works! </p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+    
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-4">
+                                            <a href="./classes/Javascript.html">
+                                                <div class="card card-member cardSize">
+                                                    <div class="content">
+                                                        <div class="avatar avatar-danger">
+                                                            <img alt="..." class="img-circle" src="./assets/img/lessonIcons/javascript.jpg"/>
+                                                        </div>
+                                                        <div class="description">
+                                                            <h3 class="title">Javascript 1</h3>
+                                                            <p class="description">Here are the foundations of Javascript! Javascript is how we make our sites dynamic, but first, we have to learn the basics!</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                      <div class="col-md-4">
+                                            <div class="card card-member cardSize">
+                                                <a href="./homework/javascriptHomework.html">
+                                                    <div class="content">
+                                                        <div class="avatar avatar-danger">
+                                                            <img alt="..." class="img-circle" src="assets/img/lessonIcons/js.jpg"/>
+                                                        </div>
+                                                        <div class="description">
+                                                            <h3 class="title">Javascript Homework</h3>
+                                                            <p class="description">Test your javascript skills!</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card card-member cardSize">
+                                                <a href="./classes/JavascriptPartII.html">
+                                                    <div class="content">
+                                                        <div class="avatar avatar-danger">
+                                                            <img alt="..." class="img-circle" src="assets/img/lessonIcons/coffee.jpg"/>
+                                                        </div>
+                                                        <div class="description">
+                                                            <h3 class="title">Javascript 2!</h3>
+                                                            <p class="description">Now that the basics are out of the way, let's try working with functions, objects, and then
+                                                                integrating javascript into our sites!</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    <div class="col-md-4">
+                                        <div class="card card-member cardSize">
+                                            <a href="./classes/JavascriptandWebPages!.html">
+                                            <div class="content">
+                                                <div class="avatar avatar-danger">
+                                                    <img alt="..." class="img-circle" src="assets/img/lessonIcons/screenCode.jpg" />
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Javascript and Web Pages! !</h3>
+                                                    <p class="description"> Now it's time to mix what we've learned into one! </p>
+                                                </div>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-4">
+                                        <div class="card card-member cardSize">
+                                            <a href="./classes/DOM.html">
+                                                <div class="content">
+                                                    <div class="avatar avatar-danger">
+                                                        <img alt="..." class="img-circle"
+                                                            src="assets/img/lessonIcons/js.jpg" />
+                                                    </div>
+                                                    <div class="description">
+                                                        <h3 class="title">THE DOM</h3>
+                                                        <p class="description">Javascript and HTML!</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-      <br>
-      <div class="row">
-        <div class="col-md-12 form-group">
-          <button class="btn pull-right" type="submit">Send</button>
+    </div>
+
+
+    <div class="section">
+            <div class="container">
+                <div class="row">
+                        <h3>Where are our students from?</h3>
+                               <!--Google map-->
+                               <div id="map-container-google-1" class="z-depth-1-half map-container">
+                                    <iframe src="https://maps.google.com/maps?q=stlouis&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                                        style="border:0; width:100%; height: 600px" allowfullscreen></iframe>
+                                </div>
+                   
+                </div>
+               
+            </div>
+             
+ 
+
+    </div>
+
+    <footer class="footer footer-big footer-color-black" data-color="black">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-3">
+                    <div class="info">
+                        <h5 class="title">Company</h5>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#">Home</a></li>
+                                <li>
+                                    <a href="#">Find offers</a>
+                                </li>
+                                <li>
+                                    <a href="#">Discover Projects</a>
+                                </li>
+                                <li>
+                                    <a href="#">Our Portfolio</a>
+                                </li>
+                                <li>
+                                    <a href="#">About Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-offset-1 col-sm-3">
+                    <div class="info">
+                        <h5 class="title"> Help and Support</h5>
+                         <nav>
+                            <ul>
+                                <li>
+                                    <a href="#">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="#">How it works</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="info">
+                        <h5 class="title">Latest News</h5>
+                        Student sites are up!
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-offset-1 col-sm-3">
+                    <div class="info">
+                        <h5 class="title">Follow us on</h5>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-facebook btn-simple">
+                                        <i class="fa fa-facebook-square"></i> Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-dribbble btn-simple">
+                                        <i class="fa fa-dribbble"></i> Dribbble
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-twitter btn-simple">
+                                        <i class="fa fa-twitter"></i> Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-reddit btn-simple">
+                                        <i class="fa fa-google-plus-square"></i> Google+
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright">
+                 © <script> document.write(new Date().getFullYear()) </script> BDPA HSCC
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <br>
-  <h3 class="text-center">From The Blog</h3>  
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">Mike</a></li>
-    <li><a data-toggle="tab" href="#menu1">Chandler</a></li>
-    <li><a data-toggle="tab" href="#menu2">Peter</a></li>
-  </ul>
-
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <h2>Mike Ross, Manager</h2>
-      <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
-    </div>
-    <div id="menu1" class="tab-pane fade">
-      <h2>Chandler Bing, Guitarist</h2>
-      <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h2>Peter Griffin, Bass player</h2>
-      <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Image of location/map -->
-<img src="map.jpg" class="img-responsive" style="width:100%">
-
-<!-- Footer -->
-<footer class="text-center">
-  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a><br><br>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p> 
-</footer>
-
-<script>
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip(); 
-  
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-})
-</script>
+    </footer>
 
 </body>
+<script>
+    function initMap() {
+        var myLatLng = { lat: 38.6582078, lng: -90.3547124 };
+        var map = new google.maps.Map(document.getElementById('map-container-google-1'), {
+            zoom: 11,
+            center: myLatLng
+        });
+
+
+        const hazelwoodCentral = {name: "hazelwood", latlong: {lat:38.83012, lng:-90.3180721 }}
+        const pattonville = {name: "pattonville", latlong: { lat:38.7415886, lng: -90.4566621}}
+        const micds =  {name: "micds", latlong: { lat:38.6582452, lng: -90.3996357}}
+
+        const schoolList = [hazelwoodCentral, pattonville, micds]
+
+        const markers = schoolList.map( school => {
+            return new google.maps.Marker({
+                position: school.latlong,
+                map: map,
+                title: school.name,
+            })
+        })
+    }
+</script></script>
+<!--   core js files    -->
+<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.js" type="text/javascript"></script>
+
+<!--  js library for devices recognition -->
+<script type="text/javascript" src="assets/js/modernizr.js"></script>
+
+<!--  script for google maps   -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<!--   file where we handle all the script from the Gaia - Bootstrap Template   -->
+<script type="text/javascript" src="assets/js/gaia.js"></script>
+
 </html>
